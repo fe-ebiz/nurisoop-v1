@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<!-- 190430 html 수정 및 if 추가 --> 
+<!--[if IE 8]><html lang="ko-KR" class="no-js ie8 lt-ie10"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="ko-KR">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="shortcut icon" type="image/x-icon" href="http://static.nurisoop.co.kr/images/img/nurisoop.ico">
+<title>누리숲</title>
+
+<meta name="title" content="누리숲"> 
+<meta name="author" content="누리숲">
+<meta name="subject" content="마스크팩, 재생크림, 폼클렌징, 아이크림, 여자스킨로션추천, 수분크림추천, 좁쌀여드름, 여드름화장품, 천연 화장품, 에센스"> 
+<meta name="description" content="마스크팩, 재생크림, 폼클렌징, 아이크림, 여자스킨로션추천, 수분크림추천, 좁쌀여드름, 여드름화장품, 천연 화장품, 에센스">
+<meta name="keywords" content="마스크팩, 재생크림, 폼클렌징, 아이크림, 여자스킨로션추천, 수분크림추천, 좁쌀여드름, 여드름화장품, 천연 화장품, 에센스">
+<meta name="classification" content="화장품, 화장소품">
+
+
+<meta name="naver-site-verification" content="7ac35ac4c02879644169c47cbe25cb6847e8705f">
+
+<!-- 오픈그래프 -->
+<meta property="fb:app_id" content="423544954497176">
+<meta property="og:type" content="website">
+<meta property="og:title" content="누리숲">
+<meta property="og:description" content="마스크팩, 재생크림, 폼클렌징, 아이크림, 여자스킨로션추천, 수분크림추천, 좁쌀여드름, 여드름화장품, 천연 화장품, 에센스">
+<meta property="og:image" content="http://static.nurisoop.co.kr/images/img/logo.png">
+<meta property="og:url" content="http://www.nurisoop.co.kr">
+<meta property="og:site_name" content="누리숲">
+<link rel="canonical" href="http://nurisoop.co.kr"> <!-- 대표 URL --> 
+
+<!-- 오픈그래프 -->
+
+<!-- 안드로이드 앱 -->
+<meta property="al:android:url" content="market://details?id=kr.co.nurisoop.makeup.app ">
+<meta property="al:android:app_name" content="누리숲">
+<meta property="al:android:package" content="kr.co.nurisoop.makeup.app">
+<meta property="al:web:url" content="http://nurisoop.co.kr">
+<!-- 안드로이드 앱 -->
+
+<!-- 아이폰 앱 -->
+<meta property="al:ios:url" content="itms-apps://itunes.apple.com/app/id1146332657?mt=8">
+<meta property="al:ios:app_store_id" content="1146332657">
+<meta property="al:ios:app_name" content="누리숲">
+<!-- 아이폰 앱 -->
+
+<!-- Android icon --> 
+<link rel="shortcut icon" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop128x128.png"> 
+<!-- iPhone icon --> 
+<link rel="apple-touch-icon" sizes="57x57" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop57x57.png"> 
+<!-- iPad icon --> 
+<link rel="apple-touch-icon" sizes="72x72" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop72x72.png"> 
+<!-- iPhone icon(Retina) --> 
+<link rel="apple-touch-icon" sizes="114x114" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop114x114.png"> 
+<!-- iPad icon(Retina) --> 
+<link rel="apple-touch-icon" sizes="144x144" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop144x144.png"> 
+
+
+<link rel="stylesheet" type="text/css" href="http://static.nurisoop.co.kr/css/reset.css">
+<link rel="stylesheet" type="text/css" href="http://static.nurisoop.co.kr/css/layout_20170105.css">
+<!--<link rel="stylesheet" type="text/css" href="../static/css/layout_20170105.css">-->
+
+<link rel="stylesheet" type="text/css" href="http://static.nurisoop.co.kr/css/style.css">
+
+<script src="http://static.nurisoop.co.kr/js/jquery.min.js"></script>
+<script src="http://static.nurisoop.co.kr/js/common.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var all_width = $(document).width();
+	if(all_width < 1100) { all_width = 1100; }
+	var quickbn_top = 216;
+	var quickbn_left = Math.floor(all_width / 2) + 550 + 10;
+	//$("#quickbn").css({"left": quickbn_left + "px", "top": quickbn_top + "px"});
+
+	$("#sub_menu > dl > dd > .curs").css("display", "block");
+
+	$("#gnb > ul > li > a").mouseover(function(){
+		var no = $(this).parent().index();
+		$("#sub_menu > dl > dd > ul").css("display", "none");
+		$("#sub_menu > dl > dd > ul:eq("+no+")").css("display", "block");
+	});
+	$("#sub_menu > dl > dd > ul").mouseover(function(){
+		var name = $(this).attr("class");
+		$("#gnb_"+name).addClass("ov");
+		$("#sub_menu > dl > dd > ul").css("display", "none");
+		$(this).css("display", "block");
+	});
+	$("#gnb").mouseout(function(){
+		$("#gnb > ul > li").removeClass("ov");
+		$("#sub_menu > dl > dd > ul").css("display", "none");
+		$("#sub_menu > dl > dd > .curs").css("display", "block");
+	});
+	
+	$("#gnb_bottom_line").mouseout(function(){
+		$("#gnb > ul > li").removeClass("ov");
+		$("#sub_menu > dl > dd > ul").css("display", "none");
+		$("#sub_menu > dl > dd > .curs").css("display", "block");
+	});
+	/*
+	$("#sub_menu").mouseout(function(){
+		$("#gnb > ul > li").removeClass("ov");
+		$("#sub_menu > dl > dd > ul").css("display", "none");
+	});
+	*/
+});
+</script>
+	
+</head>
+<body>
+	
+	<div id="app33_topbar" style="width:100%; height:80px; text-align:center; background-color:#acf9ff;">
+	    <a href="/event/view/88"><img src="http://static.nurisoop.co.kr/images/event/33app/top_33app.jpg" alt="진행중인 이벤트"></a>
+	    <div style="position:absolute; top:26px; right:26px;">
+        	<a href="javascript:hide_app33_banner();"><img src="http://static.nurisoop.co.kr/images/event/33app/close.gif" alt="닫기"></a>
+		</div>
+    </div>
+    
+    <div id="top">
+		<div class="top_menu">
+			<ul class="login_menu">
+							<li><a href="/user2/login" title="로그인">로그인</a></li>
+				<li class="line3">|</li>
+				<!--
+				<li><a href="/user2/agree" title="회원가입">회원가입</a></li>
+				<li class="line3">|</li>
+				-->
+							<li><a href="/mypage/orderList" title="주문배송">주문배송</a></li>
+				<li class="line3">|</li>
+				<li><a href="/mypage/cartList" title="장바구니">장바구니</a></li>
+			</ul>
+		</div>
+		<div class="top_link">
+			<div class="left">
+				<p>
+					<a href="http://blog.naver.com/nurisoop1004" target="_blank" title="블로그"><img src="http://static.nurisoop.co.kr/images/img/btn_sns_b.jpg" alt="블로그"></a>
+					<a href="https://www.facebook.com/nurisoop7979" target="_blank" title="페이스북"><img src="http://static.nurisoop.co.kr/images/img/btn_sns_f.jpg" alt="페이스북"></a>
+					<a href="https://twitter.com/nurisoop" target="_blank" title="트위터"><img src="http://static.nurisoop.co.kr/images/img/btn_sns_t.jpg" alt="트위터"></a>
+					<a href="http://goto.kakao.com/@누리숲" target="_blank" title="카카오톡"><img src="http://static.nurisoop.co.kr/images/img/btn_sns_k.jpg" alt="카카오톡"></a>
+					<a href="https://story.kakao.com/ch/nuritalk" target="_blank" title="카카오스토리"><img src="http://static.nurisoop.co.kr/images/img/btn_sns_ks.jpg" alt="카카오스토리"></a>
+					<a href="https://www.instagram.com/nurisoop_official" target="_blank" title="인스타그램"><img src="http://static.nurisoop.co.kr/images/img/btn_sns_i.jpg" alt="인스타그램"></a>
+				</p>
+				<p><a href="/event/view/5" title="이벤트"><img src="http://static.nurisoop.co.kr/images/img/bn_topleft.png" alt="누리숲 가입시"></a></p>
+			</div>
+						<div class="center"><a href="http://www.nurisoop.co.kr" title="홈"><img src="http://static.nurisoop.co.kr/images/img/logo.png" alt="누리숲 로고"></a></div>
+						<div class="right">
+				<form name="gnbSearchForm" method="get" action="/shop/sList2/">
+					<table class="search_t">
+						<colgroup>
+							<col width="29">
+							<col width="154">
+						</colgroup>
+						<tbody><tr>
+							<td height="26"></td>
+							<td><input name="srchText" class="search_input" style="width:150px" type="text" maxlength="40" value=""></td>
+						</tr>
+					</tbody></table>
+					<input type="image" src="http://static.nurisoop.co.kr/images/img/search_img02.jpg" style="float:left">
+				</form>
+			</div>
+		</div>
+		<!--누리숲 회원등급별 혜택안내-->
+		<div style="position:absolute; left:50%; height:0px;">
+		<div id="memberClass_pop" style="position:absolute;display:none;left:-436px;top:20px;z-index:1000">
+			<div class="title">누리숲 회원등급별 혜택안내 <a href="javascript:layerClose('memberClass_pop');" title="닫기"><img src="http://static.nurisoop.co.kr/images/img/btn_close2.jpg" style="float:right"></a></div>
+			<img src="http://static.nurisoop.co.kr/images/img/memberClass.jpg" alt="누리숲 회원등급별 혜택안내">
+			<p>
+				- 모든 구매금액은 배송완료 기준입니다.<br>
+				- 배송비는 구매금액에서 제외됩니다.<br>
+				- 할인이벤트 상품 구매시 할인된 가격으로 적용됩니다.
+			</p>
+		</div>
+		</div>
+		<!--// 누리숲 회원등급별 혜택안내-->
+	</div>
+	
+	<div id="wrapper">
+		<div id="header">
+			<!--메인메뉴-->
+			<div id="gnb">
+				<ul>
+					<li id="gnb_nurisoop" class=""><a href="/company/brand" title="누리숲 소개">누리숲 소개</a></li>
+					<li id="gnb_goods_01"><a href="/shop/sList/001/" title="기능별">기능별</a></li>
+					<li id="gnb_goods_02"><a href="/shop/sList/002/" title="피부타입별">피부타입별</a></li>
+					<li id="gnb_goods_03"><a href="/shop/sList/006/" title="성분별">성분별</a></li>
+										<li id="gnb_goods_04"><a href="/shop/sList/005/" title="세트상품">세트상품</a></li>
+										<li id="gnb_event"><a href="/event" title="이벤트">이벤트</a></li>
+					<li id="gnb_review"><a href="/community/photo" title="커뮤니티">커뮤니티</a></li>
+					<li id="gnb_customer"><a href="/customer/notice" title="고객센터">고객센터</a></li>
+				</ul>
+			</div>
+			<!--서브메뉴-->
+			<div id="sub_menu">
+				<dl>
+					<dt class="hidden">서브메뉴</dt>
+					<dd>
+						<ul class="nurisoop " style="display: none;">
+							<li><a href="/company/brand">브랜드 스토리</a></li>
+							<li><a href="/company/news">누리숲 뉴스</a></li>
+						</ul>
+						<ul class="goods_01 " style="display: none;">
+							<li><a href="/shop/sList/001002/">스킨/로션</a></li><li><a href="/shop/sList/001003/">크림/앰플/오일</a></li><li><a href="/shop/sList/001007/">썬크림/비비크림</a></li><li><a href="/shop/sList/001004/">클렌징/팩/각질제거</a></li><li><a href="/shop/sList/001005/">세트상품</a></li><li><a href="/shop/sList/001008/">마스크팩</a></li><li><a href="/shop/sList/001009/">바디</a></li><li><a href="/shop/sList/001006/">화장소품</a></li>						</ul>
+						<ul class="goods_02 " style="display: none;">
+							<li><a href="/shop/sList/002004/">지성</a></li><li><a href="/shop/sList/002005/">민감성</a></li><li><a href="/shop/sList/002003/">복합성</a></li><li><a href="/shop/sList/002002/">건성</a></li>						</ul>
+						<ul class="goods_03 " style="display: none;">
+						<li><a href="/shop/sList/006002/">히알루론산</a></li><li><a href="/shop/sList/006011/">대나무</a></li><li><a href="/shop/sList/006003/">프로폴리스</a></li><li class="long"><a href="/shop/sList/006008/">어성초/EGCG</a></li><li><a href="/shop/sList/006006/">병풀</a></li><li><a href="/shop/sList/006012/">아로니아</a></li><li class="long"><a href="/shop/sList/006005/">EGF</a></li><li class="long"><a href="/shop/sList/006009/">씨벅톤(산자나무)</a></li><li class="short"><a href="/shop/sList/006001/">효모</a></li><li class="short"><a href="/shop/sList/006013/">봉독</a></li><li><a href="/shop/sList/006007/">녹차</a></li><li><a href="/shop/sList/006014/">갈락토미세스</a></li><li><a href="/shop/sList/006015/">세라마이드</a></li><li><a href="/shop/sList/006016/">스쿠알란</a></li><li class="long"><a href="/shop/sList/006017/">나이아신아마이드</a></li><li><a href="/shop/sList/006018/">쉐어버터</a></li><li><a href="/shop/sList/006019/">알로에</a></li><li class="short"><a href="/shop/sList/006022/">비피다</a></li><li style="width:150px"><a href="/shop/sList/006024/">펩타이드</a></li><li><a href="/shop/sList/006023/">해바라기씨오일</a></li><li><a href="/shop/sList/006025/">올리브</a></li>						</ul>
+						<ul class="goods_04 " style="display:none; width:1100px; margin-left:30px;">
+						<li><a href="/shop/sList/005010/">포레스트 라인</a></li><li><a href="/shop/sList/005009/">수분관리 라인</a></li><li><a href="/shop/sList/005006/">트럽케어 라인</a></li><li><a href="/shop/sList/005004/">누리촉촉 라인</a></li><li><a href="/shop/sList/005003/">자생관리 라인</a></li><li><a href="/shop/sList/005002/">각질관리 라인</a></li><li><a href="/shop/sList/005001/">대나무숲 라인</a></li><li><a href="/shop/sList/005011/">아로니아 라인</a></li>						</ul>
+						<ul class="event " style="display:none;">
+							<li><a href="/event/index">진행중인 이벤트</a></li>
+							<li><a href="/event/attendance">출첵 이벤트</a></li>
+							<li><a href="/event/index/?type=end">지난 이벤트</a></li>
+							<li><a href="/event/winners">당첨자 발표</a></li>
+						</ul>
+						<ul class="review " style="display:none;">
+							<li><a href="/community/photo">포토리뷰</a></li>
+							<li><a href="/community/review">사용후기</a></li>
+							<li><a href="/community/qna">상품QnA</a></li>
+						</ul>
+						<ul class="customer " style="display:none;">
+							<li><a href="/customer/notice">공지사항</a></li>
+							<li><a href="/customer/faq">자주하는 질문</a></li>
+							<li><a href="/customer/howto">이용안내</a></li>
+							<li><a href="/customer/sample">무료샘플신청</a></li>
+							<li><a href="/customer/qnaList">1:1 문의하기</a></li>
+							<li><a href="/customer/ingre">성분사전</a></li>
+							<li class="last "><a href="/customer/coupon">쿠폰사용방법</a></li>
+						</ul>
+						<!-- 기념일 메뉴 설정 -->
+											</dd>
+				</dl>
+			</div>
+			<div id="gnb_bottom_line" style="clear:both;">&nbsp;</div>
+		</div>
+		
+		<div id="quickbn">
+			<div id="quickbn2" style="top:220px;">
+				<p style="margin-bottom:10px;"><a href="/customer/sample"><img src="http://static.nurisoop.co.kr/images/img/wing_bn_sample.jpg" alt="전상품 무료샘플신청하기"></a></p>
+				<p style="margin-bottom:10px;"><a href="/event/kakao" target="_blank"><img src="http://static.nurisoop.co.kr/images/img/kakao_friends_bn.jpg"></a></p>
+				<div id="typeMenu">
+					<ul>
+						<li><img src="http://static.nurisoop.co.kr/images/img/typeMenu_img01.jpg" alt="피부타입별상품보기"></li>
+						<li class="btn01"><a href="/shop/sList/002004"></a></li>
+						<li class="btn02"><a href="/shop/sList/002005/"></a></li>
+						<li class="btn03"><a href="/shop/sList/002003/"></a></li>
+						<li class="btn04"><a href="/shop/sList/002002/"></a></li>
+						<li><img src="http://static.nurisoop.co.kr/images/img/typeMenu_img02.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="scrollBN">
+			<div id="scrollBN2">
+				<p style="margin-bottom:10px;"><a href="/event/view201603"><img src="http://static.nurisoop.co.kr/images/event/20160203/guerrilla_left_bn.png" alt="1+1 위클리 이벤트"></a></p><p style="margin-bottom:10px;"><a onclick="javascript: GoGoCard();" style="cursor:pointer;"><img src="http://file.nurisoop.co.kr/banner/201803/bn_left_card.jpg" alt="무이자 할부 배너" style="width:110px;"></a></p>			<script>
+					function GoGoCard(){
+						var arrPageSizes = this.___getPageSize();
+						$("body").append("<div id='overlay1'></div>");
+						$("#overlay1").css({"background-color":"#000", "opacity":"0.6", "top":"0", "z-index":"999", "position":"absolute", "width":arrPageSizes[0], "height":arrPageSizes[1]});
+						$("#free_interest_layer").css({"top":"0px", "left": "500%"}).show();
+						$("#loadcard").show();				
+						location.href="#";
+					}
+
+					function GoCardClose(){
+						$("#overlay1").slideUp(function(){ $("#overlay1").remove(); });
+						$("#loadcard").hide();	
+					}
+
+					function ___getPageSize(){
+						var xScroll, yScroll;
+						if (window.innerHeight && window.scrollMaxY) {	
+							xScroll = window.innerWidth + window.scrollMaxX;
+							yScroll = window.innerHeight + window.scrollMaxY;
+						} else if (document.body.scrollHeight > document.body.offsetHeight){
+							xScroll = document.body.scrollWidth;
+							yScroll = document.body.scrollHeight;
+						} else {
+							xScroll = document.body.offsetWidth;
+							yScroll = document.body.offsetHeight;
+						}
+						var windowWidth, windowHeight;
+						if (self.innerHeight) {
+							if(document.documentElement.clientWidth){
+								windowWidth = document.documentElement.clientWidth; 
+							} else {
+								windowWidth = self.innerWidth;
+							}
+							windowHeight = self.innerHeight;
+						} else if (document.documentElement && document.documentElement.clientHeight) {
+							windowWidth = document.documentElement.clientWidth;
+							windowHeight = document.documentElement.clientHeight;
+						} else if (document.body) {
+							windowWidth = document.body.clientWidth;
+							windowHeight = document.body.clientHeight;
+						}	
+
+						if(yScroll < windowHeight){
+							pageHeight = windowHeight;
+						} else { 
+							pageHeight = yScroll;
+						}
+
+						if(xScroll < windowWidth){	
+							pageWidth = xScroll;		
+						} else {
+							pageWidth = windowWidth;
+						}
+						arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight);
+						return arrayPageSize;
+					}
+				</script>
+				<style>
+				/*카드 무이자 혜택*/
+				.lpop_wrap2{position:absolute;z-index:900;background-color:#fff}
+				.lpop_wrap2 .lpop_cont{padding:31px 30px 24px;border:2px solid #3d3e47}
+				.lpop_wrap2 .lpop_cont .h_area{width:377px;height:29px;padding-top:14px;background-color:#7d818d;text-align:center}
+				.lpop_wrap2 .btn_clse{position:absolute;top:9px;right:9px;width:19px;height:19px;}
+				.lpop_wrap2 .cp_lst{margin-top:10px;border-bottom:1px solid #d5d9e0;white-space:normal}
+				.lpop_wrap2 .cp_lst.card_type{margin-top:15px;border-bottom:0}
+				.lpop_wrap2 .bg_line1,.lpop_wrap2 .bg_line2{position:absolute;left:32px;height:1px;background-color:#dedede}
+				.lpop_wrap2 .bg_line1{top:237px;width:645px}
+				.lpop_wrap2 .bg_line2{top:415px;width:410px}
+				.lpop_wrap2 .cp_lst.card_type .scroll{left:-1px;*left:0}
+				@media screen and (-webkit-min-device-pixel-ratio:0) {.lpop_wrap2 .cp_lst.card_type .scroll{left:0}}
+				.lpop_wrap2 .cp_lst.card_type .scroll > table{border:1px solid #dedede;border-top:0}
+				.lpop_wrap2 .cp_lst thead th{height:30px;border-top:1px solid #dedede; background:#efefef; color:#454545;font-size:11px;letter-spacing:-1px; text-align:center; font-weight:600}
+				.lpop_wrap2 .cp_lst tbody{color:#333;font-size:11px;}
+				.lpop_wrap2 .cp_lst tbody th{padding:9px 5px 8px 13px;border-top:1px solid #d5d9e0;background:#fff;color:#555;font-weight:normal;text-align:left;line-height:18px}
+				.lpop_wrap2 .cp_lst.card_type tbody td{border:1px solid #dedede;border-right:0;border-bottom:0}
+				.lpop_wrap2 .cp_lst tbody > tr > td[colSpan="3"],.lpop_wrap2 .cp_lst.card_type tbody > tr > td[colSpan="3"],
+				.lpop_wrap2 .cp_lst tbody > tr > td[colSpan="4"],.lpop_wrap2 .cp_lst.card_type tbody > tr > td[colSpan="4"]{border-left:0}
+				.lpop_wrap2 .cp_lst tbody > tr > td[colSpan="3"],.lpop_wrap2 .cp_lst.card_type tbody > tr > td[colSpan="3"],
+				.lpop_wrap2 .cp_lst tbody > tr > td[colSpan="4"],.lpop_wrap2 .cp_lst.card_type tbody > tr > td[colSpan="4"],
+				.lpop_wrap2 .cp_lst tbody > tr > td[colSpan="3"] .frst th,.lpop_wrap2 .cp_lst.card_type tbody > tr > td[colSpan="3"] .frst td,
+				.lpop_wrap2 .cp_lst tbody > tr > td[colSpan="4"] .frst th,.lpop_wrap2 .cp_lst.card_type tbody > tr > td[colSpan="4"] .frst td{border-top:0}
+				.lpop_wrap2 .cp_lst.card_type caption + thead + tbody > tr > td{border-top:0 none}
+				.lpop_wrap2 .cp_lst tbody th.card{padding:0;text-align:center;vertical-align:middle}
+				.lpop_wrap2 .cp_lst.card_type tbody th.card{width:135px;padding:0;text-align:center;vertical-align:middle}
+				.lpop_wrap2 .cp_lst tbody th.card span{display:inline-block;overflow:hidden;width:86px;height:19px;margin-left:0;background:url( http://file.nurisoop.co.kr/banner/201803/sp_creditcard.png ) no-repeat;line-height:100px;vertical-align:middle}
+				.lpop_wrap2 .cp_lst tbody th.card .kb{background-position:-300px -265px}
+				.lpop_wrap2 .cp_lst tbody th.card .mg{background-position:-300px -285px}
+				.lpop_wrap2 .cp_lst tbody th.card .lt{background-position:-300px -305px}
+				.lpop_wrap2 .cp_lst tbody th.card .sh{background-position:-300px -325px}
+				.lpop_wrap2 .cp_lst tbody th.card .keb{background-position:-300px -345px}
+				.lpop_wrap2 .cp_lst tbody th.card .jc{background-position:-300px -365px}
+				.lpop_wrap2 .cp_lst tbody th.card .hn{background-position:-300px -385px}
+				.lpop_wrap2 .cp_lst tbody th.card .mc{background-position:-300px -405px}
+				.lpop_wrap2 .cp_lst tbody th.card .bc{background-position:-390px -265px}
+				.lpop_wrap2 .cp_lst tbody th.card .nh{background-position:-390px -285px}
+				.lpop_wrap2 .cp_lst tbody th.card .ss{background-position:-390px -305px}
+				.lpop_wrap2 .cp_lst tbody th.card .sinh{background-position:-390px -325px}
+				.lpop_wrap2 .cp_lst tbody th.card .wr{background-position:-390px -345px}
+				.lpop_wrap2 .cp_lst tbody th.card .jb{background-position:-390px -365px}
+				.lpop_wrap2 .cp_lst tbody th.card .hd{background-position:-390px -385px}
+				.lpop_wrap2 .cp_lst tbody th.card .vs{background-position:-390px -405px}
+				.lpop_wrap2 .cp_lst tbody th.card .kdb{background-position:-480px -265px}
+				.lpop_wrap2 .cp_lst tbody th.card .kj{background-position:-480px -285px}
+				.lpop_wrap2 .cp_lst tbody th.card .shb{background-position:-480px -305px}
+				.lpop_wrap2 .cp_lst tbody th.card .ct{background-position:-480px -325px}
+				.lpop_wrap2 .cp_lst tbody th.card .er{background-position:-480px -345px}
+				.lpop_wrap2 .cp_lst tbody th.card .jj{background-position:-480px -365px}
+				.lpop_wrap2 .cp_lst tbody th.card .jcb{background-position:-480px -385px}
+				.lpop_wrap2 .cp_lst tbody th.card .tmsh{background-position:-480px -405px}
+				.lpop_wrap2 .cp_lst tbody td{border-top:1px solid #dedede;color:#555;text-align:center}
+				.lpop_wrap2 .cp_lst.card_type tbody td{border:1px solid #dedede;border-right:0;border-bottom:0}
+				.lpop_wrap2 .cp_lst .frst th,.lpop_wrap2 .cp_lst .frst td{border-top:none}
+				.lpop_wrap2 .cp_lst tbody.td_type1 td{ !important;text-align:left}
+				.lpop_wrap2 .cp_lst.card_type tbody.td_type1 td{padding:10px 0 10px 0 !important;line-height:15px;text-align:center}
+				.lpop_wrap2 .cp_lst.card_type tbody.td_type1 .al1{width:60px; text-align:left;padding:10px 15px !important}
+				.lpop_wrap2 .cp_lst.card_type tbody.td_type1 .al2{width:160px;padding-left:15px !important;padding-right:16px !important;text-align:left}
+				.lpop_wrap2 .cp_lst .scroll{overflow-y:scroll;overflow-x:hidden;position:relative;height:105px}
+				</style>
+				<div id="loadcard" style="width:100%; display:none; POSITION:absolute;z-index:99999999999;top:0px;text-align:left;">
+					<div class="lpop_wrap2" id="free_interest_layer">
+						<div class="lpop_cont">
+						   <h3>
+								<img src="http://static.nurisoop.co.kr/images/event/card_tit_0.jpg" align="무이자 할부 혜택 안내"><br>
+								<span style="color:#666; margin-top:7px">- 기간 : 2018년 09월 01일 ~ 2018년 09월 30일</span>
+						   </h3>
+							<a href="javascript:GoCardClose();" class="btn_clse"><img src="http://img.entv.co.kr/btn_close.jpg"></a>
+							<table width="410" class="cp_lst card_type" border="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<td colspan="3">
+											<div class="scroll" style="width: 410px; height: 323px;">
+												<div style="text-align:left; padding:10px 0;  border-top:1px solid #ddd; border-left:1px solid #ddd;  border-bottom:1px solid #ddd; background:#eee">
+															<img src="http://img.entv.co.kr/card_tit_1.gif" align="무이자할부">
+													   </div><table width="410" border="0" cellspacing="0">
+													<tbody class="td_type1">
+
+
+
+													<tr>
+													  <th class="card" scope="rowgroup"><span class="ss">삼성카드</span></th>
+													  <td class="al1">5만원 이상</td>
+													  <td class="al2">2~5개월</td>
+													</tr>
+
+													<tr>
+													  <th class="card" scope="rowgroup"><span class="hd">현대카드</span></th>
+													  <td class="al1">5만원 이상</td>
+													  <td class="al2">2~5개월</td>
+													</tr>
+
+													<tr>
+													  <th class="card" scope="rowgroup"><span class="kb">KB국민카드</span></th>
+													  <td class="al1">5만원 이상</td>
+													  <td class="al2">2~5개월</td>
+													</tr>
+
+													<tr>
+													  <th class="card" scope="rowgroup"><span class="sh">신한카드</span></th>
+													  <td class="al1">5만원 이상</td>
+													  <td class="al2">2~5개월</td>
+													</tr>
+
+
+
+													<tr>
+													  <th class="card" scope="rowgroup"><span class="lt">롯데카드</span></th>
+													  <td class="al1">5만원 이상</td>
+													  <td class="al2">2~5개월</td>
+													</tr>
+
+													<tr>
+													  <th class="card" scope="rowgroup"><span class="bc">BC카드</span></th>
+													  <td class="al1">5만원 이상</td>
+													  <td class="al2">2~5개월</td>
+													</tr>
+
+													<tr>
+													  <th class="card" scope="rowgroup"><span class="nh">농협카드</span></th>
+													  <td class="al1">5만원 이상</td>
+													  <td class="al2">2~6개월</td>
+													</tr>
+
+													<tr class="card">
+													  <th class="card" scope="rowgroup"><span class="ct">씨티카드</span></th>
+													  <td class="al1">5만원 이상</td>
+													  <td class="al2">2~3개월</td>
+													</tr>
+
+													<tr>
+													  <th class="card" scope="rowgroup"><span class="hn">하나SK카드</span></th>
+													  <td class="al1">5만원 이상</td>
+													  <td class="al2">2~5개월</td>
+													</tr>
+
+												   <!--------- 부분 무이자할부 -------------->  
+												   <tr><td colspan="3" style="text-align:left;  border-top:1px solid #ddd; background:#eee"><img src="http://img.entv.co.kr/card_tit_2.gif" align="부분 무이자할부"></td></tr>
+
+													<tr>
+													  <th class="card" rowspan="4" scope="rowgroup"><span class="ss">삼성카드</span></th>
+													  <td rowspan="4" class="al1">5만원 이상</td>
+													  <td class="al1">6,10,12개월</td>
+													</tr>
+
+													<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>
+													<tr>
+													 <td class="al2">10개월 1,2회차 고객부담</td>
+													</tr>
+													<tr>
+													  <td class="al2">12개월 1,2,3회차 고객부담</td>
+													</tr>
+
+													<tr>
+													  <th class="card" rowspan="3" scope="rowgroup"><span class="hd">현대카드</span></th>
+													  <td rowspan="3" class="al1">5만원 이상</td>
+													  <td class="al1">6,10개월</td>
+													</tr>
+
+													<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>
+													<tr>
+													 <td class="al2">10개월 1,2회차 고객부담</td>
+													</tr>
+
+													<tr>
+													  <th class="card" rowspan="3" scope="rowgroup"><span class="kb">KB국민카드</span></th>
+													  <td rowspan="3" class="al1">5만원 이상</td>
+													  <td class="al1">6,10개월</td>
+													</tr>
+
+													<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>
+													<tr>
+													 <td class="al2">10개월 1,2회차 고객부담</td>
+													</tr>
+
+													 <tr>
+													  <th class="card" rowspan="3" scope="rowgroup"><span class="sh">신한카드</span></th>
+													  <td rowspan="3" class="al1">5만원 이상</td>
+													  <td class="al1">6,10개월</td>
+													</tr>
+
+													<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>
+													<tr>
+													 <td class="al2">10개월 1,2회차 고객부담</td>
+													</tr>
+
+													<tr>
+													  <th class="card" rowspan="3" scope="rowgroup"><span class="lt">롯데카드</span></th>
+													  <td rowspan="3" class="al1">5만원 이상</td>
+													  <td class="al1">6,10개월</td>
+													</tr>
+
+													<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>
+													<tr>
+													 <td class="al2">10개월 1,2회차 고객부담</td>
+													</tr>
+
+													<tr>
+													  <th class="card" rowspan="4" scope="rowgroup"><span class="bc">BC카드</span></th>
+													  <td rowspan="4" class="al1">5만원 이상</td>
+													  <td class="al1">6,7,8,9,10,11,12개월</td>
+													</tr>
+
+													<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>
+													<tr>
+													 <td class="al2">7,8,9,10개월 1,2회차 고객부담</td>
+													</tr>
+													 <tr>
+													 <td class="al2">11,12개월 1,2,3회차 고객부담</td>
+													</tr>
+
+													<tr>
+													  <th class="card" rowspan="3" scope="rowgroup"><span class="nh">농협카드</span></th>
+													  <td rowspan="3" class="al1">5만원 이상</td>
+													  <td class="al1">7,8,9,10,11,12개월</td>
+													</tr>
+
+													<!--<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>-->
+													<tr>
+													 <td class="al2">7,8,9,10개월 1,2회차 고객부담</td>
+													</tr>
+													 <tr>
+													 <td class="al2">11,12개월 1,2,3회차 고객부담</td>
+													</tr>
+
+													<tr>
+													  <th class="card" rowspan="3" scope="rowgroup"><span class="hn">하나SK카드</span></th>
+													  <td rowspan="3" class="al1">5만원 이상</td>
+													  <td class="al1">6,10개월</td>
+													</tr>
+
+													<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>
+													<tr>
+													 <td class="al2">10개월 1,2회차 고객부담</td>
+													</tr>
+
+
+
+												   <tr>
+														<td colspan="3" style="text-align:left;  border-top:1px solid #ddd; background:#eee">
+															<img src="http://img.entv.co.kr/card_tit_3.gif" align="신청 고객 무이자할부">
+														</td>
+												   </tr> 
+
+												   <tr>
+													<td colspan="3" style="text-align:left;">
+														사전 신청한 고객에 한함 <br>
+														BC카드 : ☎1899-5772 / 하나BC카드제외 <br>
+														NH농협카드 : ☎1644-2009
+													</td>
+												   </tr>
+
+												   <tr>
+													  <th class="card" rowspan="4" scope="rowgroup"><span class="bc">BC카드</span></th>
+													  <td rowspan="4" class="al1">5만원 이상</td>
+													  <td class="al1">2~5개월 무이자 할부</td>
+													</tr>
+													<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>
+													<tr>
+													 <td class="al2">7,8,9,10개월 1,2회차 고객부담</td>
+													</tr>
+													<tr>
+													  <td class="al2">11,12개월 1,2,3회차 고객부담</td>
+													</tr>
+
+
+												   <tr>
+													  <th class="card" rowspan="3" scope="rowgroup"><span class="nh">NH농협카드</span></th>
+													  <td rowspan="3" class="al1">5만원 이상</td>
+													  <td class="al1">2~6개월 무이자 할부</td>
+													</tr>
+													<!--<tr>
+													  <td class="al2">6개월 1회차 고객부담</td>
+													</tr>-->
+													<tr>
+													 <td class="al2">7,8,9,10개월 1,2회차 고객부담</td>
+													</tr>
+													<tr>
+													  <td class="al2">11,12개월 1,2,3회차 고객부담</td>
+													</tr>
+
+											  </tbody></table>
+
+										</div>
+								  </td>
+								</tr>
+							  </tbody>
+							</table>
+							<p style="margin-top:15px; color:#666; line-height:1.4">
+								* 유의사항<br>
+								1.&nbsp;법인/체크/선불/기프트/은행계열카드 제외 <br>
+								2. 직계약 직계약 가맹점, 상점부담 무이자 가맹점, 특별제휴가맹점,<br>
+								오프라인 가맹점, 신규 가맹점 등 일부 제외  <br>
+								3. 본 행사는 카드사 사정에 따라 변경 또는 중단될 수 있음 <br>
+								4. 무이자할부 결제 시 포인트, 마일리지 적립 제외<br>
+										<br>
+							</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	</div>
+	<!--//-->
+	
+	<style type="text/css">
+	#bannerImg LI { position:absolute; }
+	</style>
+	
+	<div id="main_top">
+		<div class="go">
+			<a href="/customer/sample" target="_top"><img src="http://static.nurisoop.co.kr/images/img/bn_main01.jpg" alt="무료샘플 신청"></a>
+			<span class="line"></span>
+			<a href="http://www.nurisoop.co.kr/event/view/191" target="_top"><img src="http://file.nurisoop.co.kr/banner/201808/1535590208phpRcGv2v.jpg" alt="대용량스킨출시"></a>
+		</div>
+
+		<div class="banner">
+							<!-- 메인배너 롤링 -->
+			<div class="bannerMenu" style="position:relative;">
+				<ul id="bannerTab">
+												<li class=""><a href="http://www.nurisoop.co.kr/event/view/191" target="_blank">&lt; 대용량 스킨 출시기념♥</a> 
+													</li><li class=""><a href="https://shopping.naver.com/beauty/stores/100144492" target="_blank">&lt; 네이버쇼핑 단독특가!</a> 
+													</li><li class=""><a href="/event/view201603" target="_top">&lt; 1+1 위클리 이벤트</a> 
+													</li><li class=""><a href="event/view201612proposer" target="_top">&lt; 친구와 함께 예뻐지고 적립금도 쌓자!</a> 
+													</li><li class="on"><a href="/event/view/25/" target="_top">&lt; 후기쓰고 적립금 받자!</a> 
+												</li>
+				</ul>
+				<ul id="bannerImg" style="width:662px; height:275px;">
+												<li class="first" style="z-index: 1; opacity: 1;"><a href="http://www.nurisoop.co.kr/event/view/191" target="_blank"><img alt="대용량 스킨 출시기념♥" src="http://file.nurisoop.co.kr/banner/201808/1535524384phpvYPtgM.jpg" style="width:662px; height:275px;"></a> 
+													</li><li style="z-index: 1; opacity: 1;"><a href="https://shopping.naver.com/beauty/stores/100144492" target="_blank"><img alt="네이버쇼핑 단독특가!" src="http://file.nurisoop.co.kr/banner/201805/1525224089phpgCpgtO.jpg" style="width:662px; height:275px;"></a> 
+													</li><li style="z-index: 1; opacity: 1;"><a href="/event/view201603" target="_top"><img alt="1+1 위클리 이벤트" src="http://file.nurisoop.co.kr/banner/201802/1519795481phptGrdZ6.jpg" style="width:662px; height:275px;"></a> 
+													</li><li style="z-index: 2; opacity: 1;"><a href="event/view201612proposer" target="_top"><img alt="친구와 함께 예뻐지고 적립금도 쌓자!" src="http://file.nurisoop.co.kr/banner/201703/1490664737phpvWxTYw.jpg" style="width:662px; height:275px;"></a> 
+													</li><li style="z-index: 10; opacity: 1;"><a href="/event/view/25/" target="_top"><img alt="후기쓰고 적립금 받자!" src="http://file.nurisoop.co.kr/banner/201705/1494483830phpEs6Goj.jpg" style="width:662px; height:275px;"></a> 
+												</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 공지사항 텍스트 슬라이드 -->
+		<div class="mini_notice" style="overflow:hidden;">
+			<ul>
+				<li><img src="http://static.nurisoop.co.kr/images/img/main_txt_notice01.jpg" alt="누리숲 공지사항"></li>
+				<li class="notice">
+					<div id="mini_notice_list" style="position: relative; top: 0px;">
+						<div class="list" style="overflow:hidden; white-space:nowrap; margin-top:2px; margin-bottom:12px;"><a href="/customer/noticeView/92">2018년 추석 연휴 배송 안내</a></div><div class="list" style="overflow:hidden; white-space:nowrap; margin-top:2px; margin-bottom:12px;"><a href="/customer/noticeView/91">친구추천 적립금 지급 및 사용 공지 (2018년 9월 3일 공지)</a></div><div class="list" style="overflow:hidden; white-space:nowrap; margin-top:2px; margin-bottom:12px;"><a href="/customer/noticeView/90">누리숲 샘플킷 신청 폭주로 인한 배송지연 안내</a></div><div class="list" style="overflow:hidden; white-space:nowrap; margin-top:2px; margin-bottom:12px;"><a href="/customer/noticeView/89">[필독] 제품 제조일자 및 유통기한 안내</a></div>						</div>
+				</li>
+				<li class="btn"><a href="javascript:mini_notice('prev');"><img src="http://static.nurisoop.co.kr/images/img/btn_main_notice_left.jpg" alt="이전"></a><a href="javascript:mini_notice('next');"><img src="http://static.nurisoop.co.kr/images/img/btn_main_notice_right.jpg" alt="다음"></a></li>
+				<li style="float:right"><img src="http://static.nurisoop.co.kr/images/img/main_txt_notice02.jpg" alt="무료배송,회원가입할인"></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="main_contents">
+		<div class="leftBN">
+			<div class="fr_code_write">
+								<a href="javascript: alert('로그인 후 이용하실 수 있습니다.'); location.href='/user2/login';"><img src="http://static.nurisoop.co.kr/images/img/main_code.jpg"></a>
+							</div>
+
+							<a href="/customer/coupon" target="_top"><img src="http://static.nurisoop.co.kr/images/img/bn_main04.jpg" alt="오프라인 쿠폰번호 등록"></a>
+
+			<!-- 베스트 상품 슬라이드 -->
+
+			<script type="text/javascript">
+			var lBnBest		= 1;
+			var lBnBestM	= 1;
+			var	lBnBAuto;
+			$(document).ready(function() {
+				lBnBestM	= $(".lBnBest").length;
+				lBnBView(lBnBest);
+			});
+
+			function lBnBView(val) {
+				clearTimeout(lBnBAuto);
+				$(".lBnBest").fadeOut(200);
+				$("#lBnBest_"+val).fadeIn(200);
+				$("#dotBtn_best img").attr("src", "http://static.nurisoop.co.kr/images/img/btn_main_off.jpg");
+				$("#dotBtn_best .dotBtn_"+val+" img").attr("src", "http://static.nurisoop.co.kr/images/img/btn_mainBest_on.jpg");
+				lBnBAuto	= setTimeout("lBnBNext()", 3000);
+			}
+			function lBnBPrev() {
+				if((lBnBest-1) < 1) {
+					lBnBest	= lBnBestM;
+				} else {
+					lBnBest--;
+				}
+				lBnBView(lBnBest);
+			}
+			function lBnBNext() {
+				if((lBnBest+1) > lBnBestM) {
+					lBnBest	= 1;
+				} else {
+					lBnBest++;
+				}
+				lBnBView(lBnBest);
+			}
+			</script>
+			<div class="best">
+				<div class="btn_prev"><a href="javascript:lBnBPrev();"><img src="http://static.nurisoop.co.kr/images/img/btn_mainBN_prev.jpg" title="이전"></a></div>
+				<div class="btn_next"><a href="javascript:lBnBNext();"><img src="http://static.nurisoop.co.kr/images/img/btn_mainBN_next.jpg" title="다음"></a></div>
+				<img src="http://static.nurisoop.co.kr/images/img/bn_mainTitle01.jpg" alt="베스트상품">
+				<div style="height:230px;">
+												<div class="lBnBest" id="lBnBest_1" style="width: 208px; position: absolute; display: none;">
+							<a href="/shop/view/4">
+								<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201802/1519783239phpBZt4S2.jpg"><br>
+								<p class="name">누리촉촉 워터밸런스 스킨</p>
+								<p class="price"><del>12,000원</del>&nbsp;&nbsp;&nbsp;<span class="discount"><b>7,500</b>원</span></p>
+							</a>
+						</div>
+													<div class="lBnBest" id="lBnBest_2" style="width: 208px; position: absolute; display: block; opacity: 1;">
+							<a href="/shop/view/7">
+								<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1428484281php6SN67O.jpg"><br>
+								<p class="name">포레스트 리페어 크림</p>
+								<p class="price"><del>25,000원</del>&nbsp;&nbsp;&nbsp;<span class="discount"><b>21,000</b>원</span></p>
+							</a>
+						</div>
+													<div class="lBnBest" id="lBnBest_3" style="width: 208px; position: absolute; display: block; opacity: 0;">
+							<a href="/shop/view/27">
+								<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/chocchoc_cream_70/200.jpg"><br>
+								<p class="name">누리촉촉 딥 수딩크림 [exp: 2019-02-22]</p>
+								<p class="price"><del>20,000원</del>&nbsp;&nbsp;&nbsp;<span class="discount"><b>9,900</b>원</span></p>
+							</a>
+						</div>
+													<div class="lBnBest" id="lBnBest_4" style="width: 208px; position: absolute; display: none;">
+							<a href="/shop/view/60">
+								<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/forest/cream/200X200.jpg"><br>
+								<p class="name">포레스트 리페어 EGF 크림</p>
+								<p class="price"><del>40,000원</del>&nbsp;&nbsp;&nbsp;<span class="discount"><b>36,500</b>원</span></p>
+							</a>
+						</div>
+											</div>
+				<span class="dotBtn" id="dotBtn_best">
+												<a href="javascript:lBnBView('1');" class="dotBtn_1"><img src="http://static.nurisoop.co.kr/images/img/btn_main_off.jpg"></a>
+													<a href="javascript:lBnBView('2');" class="dotBtn_2"><img src="http://static.nurisoop.co.kr/images/img/btn_main_off.jpg"></a>
+													<a href="javascript:lBnBView('3');" class="dotBtn_3"><img src="http://static.nurisoop.co.kr/images/img/btn_mainBest_on.jpg"></a>
+													<a href="javascript:lBnBView('4');" class="dotBtn_4"><img src="http://static.nurisoop.co.kr/images/img/btn_main_off.jpg"></a>
+													<a href="javascript:lBnBView('5');" class="dotBtn_5"><img src="http://static.nurisoop.co.kr/images/img/btn_main_off.jpg"></a>
+											</span>
+			</div>
+			<!-- 베스트 상품 슬라이드 END -->
+
+			<!-- 신상품 슬라이드 --->
+			<script type="text/javascript">
+			var lBnNew	= 1;
+			var lBnNewM	= 1;
+			var	lBnNAuto;
+			$(document).ready(function() {
+				lBnNewM	= $(".lBnNew").length;
+				lBnNView(lBnNew);
+			});
+
+			function lBnNView(val) {
+				clearTimeout(lBnNAuto);
+				$(".lBnNew").fadeOut(200);
+				$("#lBnNew_"+val).fadeIn(200);
+				$("#dotBtn_new img").attr("src", "http://static.nurisoop.co.kr/images/img/btn_main_off.jpg");
+				$("#dotBtn_new .dotBtn_"+val+" img").attr("src", "http://static.nurisoop.co.kr/images/img/btn_mainNew_on.jpg");
+				lBnNAuto	= setTimeout("lBnNNext()", 3000);
+			}
+			function lBnNPrev() {
+				if((lBnNew-1) < 1) {
+					lBnNew	= lBnNewM;
+				} else {
+					lBnNew--;
+				}
+				lBnNView(lBnNew);
+			}
+			function lBnNNext() {
+				if((lBnNew+1) > lBnNewM) {
+					lBnNew	= 1;
+				} else {
+					lBnNew++;
+				}
+				lBnNView(lBnNew);
+			}
+			</script>
+			<div class="new">
+				<div class="btn_prev"><a href="javascript:lBnNPrev();"><img src="http://static.nurisoop.co.kr/images/img/btn_mainBN_prev.jpg" title="이전"></a></div>
+				<div class="btn_next"><a href="javascript:lBnNNext();"><img src="http://static.nurisoop.co.kr/images/img/btn_mainBN_next.jpg" title="다음"></a></div>
+				<img src="http://static.nurisoop.co.kr/images/img/bn_mainTitle02.jpg" alt="신상품">
+				<div style="height:230px;">
+												<div class="lBnNew" id="lBnNew_1" style="width: 208px; position: absolute; display: none;">
+							<a href="/shop/view/153">
+								<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201807/1531356638phpL6qePT.jpg"><br>
+								<p class="name">가지솔 시카 토너</p>
+								<p class="price"><del>20,000원</del>&nbsp;&nbsp;&nbsp;<span class="discount"><b>16,500</b>원</span></p>
+							</a>
+						</div>
+													<div class="lBnNew" id="lBnNew_2" style="width: 208px; position: absolute; display: none;">
+							<a href="/shop/view/154">
+								<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201807/1531358453php9aXcvN.jpg"><br>
+								<p class="name">가지솔 시카 크림</p>
+								<p class="price"><del>22,000원</del>&nbsp;&nbsp;&nbsp;<span class="discount"><b>18,000</b>원</span></p>
+							</a>
+						</div>
+													<div class="lBnNew" id="lBnNew_3" style="width: 208px; position: absolute; display: block;">
+							<a href="/shop/view/155">
+								<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201807/1531361694phpCyat1W.jpg"><br>
+								<p class="name">가지솔 시카 토너/크림 2종세트</p>
+								<p class="price"><del>42,000원</del>&nbsp;&nbsp;&nbsp;<span class="discount"><b>34,500</b>원</span></p>
+							</a>
+						</div>
+											</div>
+				<span class="dotBtn" id="dotBtn_new">
+												<a href="javascript:lBnNView('1');" class="dotBtn_1"><img src="http://static.nurisoop.co.kr/images/img/btn_main_off.jpg"></a>
+													<a href="javascript:lBnNView('2');" class="dotBtn_2"><img src="http://static.nurisoop.co.kr/images/img/btn_main_off.jpg"></a>
+													<a href="javascript:lBnNView('3');" class="dotBtn_3"><img src="http://static.nurisoop.co.kr/images/img/btn_mainNew_on.jpg"></a>
+											</span>
+			</div>
+			<!-- 신상품 슬라이드 END --->
+
+			<a href="/shop/view/52" target="_top"><img src="http://static.nurisoop.co.kr/images/img/bn_main05.jpg" alt="톤업워너비비크림"></a>
+		</div>
+
+
+
+		<div class="goods" id="goodsWrap">		
+
+			<img id="recomMenu" alt="전체상품" src="http://static.nurisoop.co.kr/images/img/tab_main1.jpg" border="0" usemap="#Map">
+			<map name="Map" id="Map">
+			  <area href="javascript:setMenu('1', 'NM_ALL', 9);" shape="rect" coords="0,1,214,93" onfocus="this.blur();" onclick="this.blur();" alt="인기순">
+			  <area href="javascript:setMenu('2', 'NM_RECOM_A', 9);" shape="rect" coords="215,0,430,108" onfocus="this.blur();" onclick="this.blur();" alt="피부타입별추천상품">
+			  <area href="javascript:setMenu('3', 'NM_RECOM_B', 9);" shape="rect" coords="432,2,644,115" onfocus="this.blur();" onclick="this.blur();" alt="기능별추천상품">
+			  <area href="javascript:setMenu('4', 'NM_NEW', 9);" shape="rect" coords="646,2,970,154" onfocus="this.blur();" onclick="this.blur();" alt="전체상품">
+			</map>
+			<span id="recom_list"><ul class="list">
+							<li>
+								<div class="best">BEST<br>1</div>
+								<a href="/shop/view/8">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1428484215phpZHZZCB.jpg"><br>
+									<p class="name">포레스트 녹삼초 폼클렌저 [exp: 2019-02-21]</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>10,000원</del></p>
+												<p class="discount"><b>8,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon25.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon30.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon18.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/8">녹차추출물, 삼백초잎/뿌리추출물,<br> 어성초추출물, EGCG<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>2</div>
+								<a href="/shop/view/13">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201802/1519799077phpq4kwSl.jpg"><br>
+									<p class="name">누리촉촉워터밸런스2종세트(스킨+로션)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>24,000원</del></p>
+												<p class="discount"><b>12,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon25.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon03.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon38.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/13">히알루론산, 병풀추출물<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>3</div>
+								<a href="/shop/view/11">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1428484081php27TIRM.jpg"><br>
+									<p class="name">론리비즈 프로폴리스 85 앰플</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>21,000원</del></p>
+												<p class="discount"><b>19,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon09.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon32.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon18.gif" style="margin-left:3px;">
+
+									<p style="margin-top:3px;"><b style="padding:1px 4px; border:2px solid yellow; background-color:red; color:white; font-family:nanumgothic;">1+1 게릴라 이벤트</b></p>
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/11">프로폴리스추출물, 녹차추출물<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>4</div>
+								<a href="/shop/view/4">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201802/1519783239phpBZt4S2.jpg"><br>
+									<p class="name">누리촉촉 워터밸런스 스킨</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>12,000원</del></p>
+												<p class="discount"><b>7,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon25.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon42.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon03.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon38.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/4">히알루론산, 티트리추출물,<br> 병풀추출물, 어성초추출물<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>5</div>
+								<a href="/shop/view/7">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1428484281php6SN67O.jpg"><br>
+									<p class="name">포레스트 리페어 크림</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>25,000원</del></p>
+												<p class="discount"><b>21,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon27.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon35.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/7">EGF, 효모발효여과물,<br> 펩타이드, 판테놀<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>6</div>
+								<a href="/shop/view/85">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201701/1484817719php8Ar0nH.jpg"><br>
+									<p class="name">누리촉촉 워터밸런스 마스크팩 [exp: 2018-11-15]</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>1,500원</del></p>
+												<p class="discount"><b>1,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon40.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon09.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/85">히알루론산, 위치하젤수<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>7</div>
+								<a href="/shop/view/86">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201701/1484817416phpF1yNm3.jpg"><br>
+									<p class="name">론리비즈 프로폴리스 마스크팩 [exp: 2018-11-19]</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>1,500원</del></p>
+												<p class="discount"><b>1,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon40.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon09.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/86">프로폴리스추출물, 로얄젤리추출물<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>8</div>
+								<a href="/shop/view/27">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/chocchoc_cream_70/200.jpg"><br>
+									<p class="name">누리촉촉 딥 수딩크림 [exp: 2019-02-22]</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>20,000원</del></p>
+												<p class="discount"><b>9,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon25.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon42.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon03.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon38.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/27">히알루론산, 병풀추출물,<br> 알로에베라잎수, 프로폴리스추출물<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>9</div>
+								<a href="/shop/view/37">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/suncream/200.jpg"><br>
+									<p class="name">누리촉촉 병풀 썬크림</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>28,000원</del></p>
+												<p class="discount"><b>24,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon33.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon26.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/37">병풀추출물, 티타늄디옥사이드,<br> 징크옥사이드, 갈락토미세스발효여과물<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>10</div>
+								<a href="/shop/view/39">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201802/1519799295phpfRNTqq.jpg"><br>
+									<p class="name">누리촉촉3종세트(스킨+로션+크림)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>44,000원</del></p>
+												<p class="discount"><b>22,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon25.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon03.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon38.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/39">히알루론산, 병풀추출물<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>11</div>
+								<a href="/shop/view/5">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201510/1444286899phpZuZvKP.jpg"><br>
+									<p class="name">누리촉촉 워터밸런스 로션</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>12,000원</del></p>
+												<p class="discount"><b>5,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon25.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon42.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon03.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon38.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/5">히알루론산, 해바라기씨오일,<br> 병풀추출물, EGCG<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>12</div>
+								<a href="/shop/view/25">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/seabuck/200.jpg"><br>
+									<p class="name">발효씨벅톤 99오일</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>15,800원</del></p>
+												<p class="discount"><b>10,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon40.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon06.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/25">산자나무오일, 병풀추출물<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>13</div>
+								<a href="/shop/view/10">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1428484133php7TsiMG.jpg"><br>
+									<p class="name">고마쥬금의 필링젤</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>15,000원</del></p>
+												<p class="discount"><b>12,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon07.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon10.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon06.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/10">오렌지추출물, 사과추출물,<br> 레몬추출물, 블랙윌로우껍질추출물<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>14</div>
+								<a href="/shop/view/122">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201701/1484183954php9CBwVs.jpg"><br>
+									<p class="name">포레스트 갈락토미세스 마스크팩 [exp 2018-11-19]</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>5,000원</del></p>
+												<p class="discount"><b>3,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon23.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon18.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/122">갈락토미세스, 아데노신<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>15</div>
+								<a href="/shop/view/28">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/cleansing_water/200.jpg"><br>
+									<p class="name">누리촉촉 비누풀 클렌징워터</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>28,000원</del></p>
+												<p class="discount"><b>19,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon40.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon10.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/28">비누풀잎추출물, 갈락토미세스,<br> 히알루론산, 베타인살리실레이트<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>16</div>
+								<a href="/shop/view/60">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/forest/cream/200X200.jpg"><br>
+									<p class="name">포레스트 리페어 EGF 크림</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>40,000원</del></p>
+												<p class="discount"><b>36,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon16.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon34.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/60">EGF, 효모발효여과물,<br> 나이아신아마이드, 아데노신<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>17</div>
+								<a href="/shop/view/15">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1428483887phpq5n40F.jpg"><br>
+									<p class="name">각질관리세트(가슬팩+고마쥬금의필링젤)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>30,000원</del></p>
+												<p class="discount"><b>22,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon07.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon22.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon17.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/15">가슬, 모로코클레이<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>18</div>
+								<a href="/shop/view/9">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1428484175phphDzOWj.jpg"><br>
+									<p class="name">피지아웃 가슬 타이트닝팩</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>15,000원</del></p>
+												<p class="discount"><b>12,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon07.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon22.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon10.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/9">가슬, 숯가루,<br> 모로코클레이, 어성초추출물<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>19</div>
+								<a href="/shop/view/61">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/forest/eyecream/200X200.jpg"><br>
+									<p class="name">포레스트 리페어 아이크림</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>24,000원</del></p>
+												<p class="discount"><b>19,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon28.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon16.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon14.gif" style="margin-left:3px;">
+
+									<p style="margin-top:3px;"><b style="padding:1px 4px; border:2px solid yellow; background-color:red; color:white; font-family:nanumgothic;">1+1 게릴라 이벤트</b></p>
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/61">지모추출물, 나이아신아마이드,<br> EGF, 보르피린<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>20</div>
+								<a href="/shop/view/52">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/toneup_bb/200.jpg"><br>
+									<p class="name">톤업 워너비비크림</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>16,000원</del></p>
+												<p class="discount"><b>14,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon16.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon24.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon31.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon18.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/52">알부틴, 티타늄디옥사이드,<br> 징크옥사이드
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>21</div>
+								<a href="/shop/view/2">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1429488928php1a72NW.jpg"><br>
+									<p class="name">대나무숲 효모에센스</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>25,000원</del></p>
+												<p class="discount"><b>21,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon06.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/2">대나무수액, 갈락토미세스,<br> 나이아신아마이드, 세라마이드3<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>22</div>
+								<a href="/shop/view/16">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1428483779phpQMMSc9.jpg"><br>
+									<p class="name">대나무숲 발효 3종세트(대나무숲2종+리페어크림)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>75,000원</del></p>
+												<p class="discount"><b>56,700</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon11.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/16">대나무수액, EGF<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>23</div>
+								<a href="/shop/view/12">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201503/1427362634phpVpmGKY.jpg"><br>
+									<p class="name">대나무숲효모2종세트 (에센스+로션)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>50,000원</del></p>
+												<p class="discount"><b>39,800</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/12">대나무수액, 갈락토미세스,<br> 세라마이드
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>24</div>
+								<a href="/shop/view/3">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201504/1428484479phpgybV8I.jpg"><br>
+									<p class="name">대나무숲 효모로션</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>25,000원</del></p>
+												<p class="discount"><b>21,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon06.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/3">대나무수액, 갈락토미세스,<br> 히알루론산, 동백오일<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>25</div>
+								<a href="/shop/view/79">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/aronia_cream/410_1.jpg"><br>
+									<p class="name">누리베리 아로니아 크림</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>15,000원</del></p>
+												<p class="discount"><b>14,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon41.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon20.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon21.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/79">아로니아열매추출물, 쉐어버터<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>26</div>
+								<a href="/shop/view/58">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/forest/skin/200X200.jpg"><br>
+									<p class="name">포레스트 리페어 스킨</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>32,000원</del></p>
+												<p class="discount"><b>29,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon28.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon16.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/58">갈락토미세스, 비피다,<br> 프룩탄, 효모발효여과물<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>27</div>
+								<a href="/shop/view/73">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/basemakeup_set/200.jpg"><br>
+									<p class="name">베이스메이크업 세트(썬크림 + 비비크림)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>44,000원</del></p>
+												<p class="discount"><b>35,460</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon24.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon26.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon16.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/73">알부틴, 티타늄디옥사이드<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>28</div>
+								<a href="/shop/view/137">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201707/1499991665phpXEGHL8.jpg"><br>
+									<p class="name">투명피부 10일 10팩세트_갈락토마스크팩*10 [1+1/exp:2018-11-19]</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>50,000원</del></p>
+												<p class="discount"><b>19,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon23.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon18.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/137">갈락토미세스, 아데노신<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>29</div>
+								<a href="/shop/view/62">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/forest/2set/skin_lotion/200X200.jpg"><br>
+									<p class="name">포레스트 리페어 스킨/로션 2종 세트 + 사은품 리페어 아이크림(본품)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>64,000원</del></p>
+												<p class="discount"><b>57,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon16.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon23.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/62">EGF, 아데노신<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>30</div>
+								<a href="/shop/view/74">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/cleansing_water_set/200.jpg"><br>
+									<p class="name">클렌징워터 세트(클렌징워터 + 에코펌프 공용기)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>31,000원</del></p>
+												<p class="discount"><b>22,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon40.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon10.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/74">비누풀잎추출물, 베타인살리실레이트<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>31</div>
+								<a href="/shop/view/80">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201609/1474864829phpsNyEWZ.jpg"><br>
+									<p class="name">누리베리 아로니아 스킨/ 로션 2종세트</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>36,000원</del></p>
+												<p class="discount"><b>28,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon41.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon21.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/80">아로니아열매추출물, 쉐어버터<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>32</div>
+								<a href="/shop/view/136">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201706/1497574351php6frOvf.jpg"><br>
+									<p class="name">디스이즈 올리브 딥 클렌징오일</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>25,000원</del></p>
+												<p class="discount"><b>19,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon40.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;">
+
+									<p style="margin-top:3px;"><b style="padding:1px 4px; border:2px solid yellow; background-color:red; color:white; font-family:nanumgothic;">1+1 게릴라 이벤트</b></p>
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/136">올리브오일, 녹차씨오일,<br> 식물성스쿠알란
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>33</div>
+								<a href="/shop/view/69">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/forest/3set/skin_lotion_cream/200X200.jpg"><br>
+									<p class="name">포레스트 리페어 스킨/로션/EGF크림 3종 세트 + 사은품(리페어 아이크림+갈락토미세스마스크팩 10매)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>104,000원</del></p>
+												<p class="discount"><b>88,400</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon16.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon34.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon27.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/69">EGF, 아데노신,<br> 프룩탄
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>34</div>
+								<a href="/shop/view/57">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/femininewash/200.jpg"><br>
+									<p class="name">녹삼초 여성청결제</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>18,000원</del></p>
+												<p class="discount"><b>15,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon40.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon09.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon29.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/57">삼백초추출물, 익모초추출물,<br> 육계추출물, 어성초추출물,<br> 녹차추출물
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>35</div>
+								<a href="/shop/view/59">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/forest/lotion/200X200.jpg"><br>
+									<p class="name">포레스트 리페어 로션</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>32,000원</del></p>
+												<p class="discount"><b>29,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon28.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon16.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon01.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/59">EGF, 갈락토미세스,<br> 나이아신아마이드, 아데노신<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>36</div>
+								<a href="/shop/view/81">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/aronia_3set/200.jpg"><br>
+									<p class="name">누리베리 아로니아 스킨/ 로션 / 크림 3종세트</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>51,000원</del></p>
+												<p class="discount"><b>39,600</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon41.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon21.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/81">아로니아열매추출물, 쉐어버터<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>37</div>
+								<a href="/shop/view/152">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201805/1526628308phpNMdHjI.jpg"><br>
+									<p class="name">물찬피부 10일 10팩세트_워터밸런스마스크팩*10 [1+1/exp:2018-11-15]</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>15,000원</del></p>
+												<p class="discount"><b>9,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon09.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon18.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/152">히알루론산, 위치하젤수<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>38</div>
+								<a href="/shop/view/77">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/aronia_skin/410_1.jpg"><br>
+									<p class="name">누리베리 아로니아 스킨</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>18,000원</del></p>
+												<p class="discount"><b>15,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon41.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon20.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon21.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/77">아로니아열매추출물, 베타인,<br> 자일리톨, 알로에베라잎즙<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>39</div>
+								<a href="/shop/view/78">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/aronia_lotion/410_1.jpg"><br>
+									<p class="name">누리베리 아로니아 로션</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>18,000원</del></p>
+												<p class="discount"><b>15,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon41.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon20.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon21.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/78">아로니아열매추출물, 쉐어버터<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>40</div>
+								<a href="/shop/view/75">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/brush/200.jpg"><br>
+									<p class="name">오리지널 모공 브러쉬(리뉴얼 상품 출고)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>13,500원</del></p>
+												<p class="discount"><b>6,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon22.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/75">
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>41</div>
+								<a href="/shop/view/90">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201607/1468546910php54xEqz.jpg"><br>
+									<p class="name">여드름 압출기</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>5,000원</del></p>
+												<p class="discount"><b>3,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon13.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon34.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon14.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/90">
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>42</div>
+								<a href="/shop/view/159">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201808/1535507596phpgeXbco.jpg"><br>
+									<p class="name">누리촉촉 워터밸런스 스킨 대용량 (출시기념 추가 증정이벤트)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>24,000원</del></p>
+												<p class="discount"><b>14,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon07.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon03.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/159">히알루론산, 어성초추출물,<br> 병풀추출물
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>43</div>
+								<a href="/shop/view/29">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/pumpbottle/200.jpg"><br>
+									<p class="name">에코 펌프 공용기</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>3,000원</del></p>
+												<p class="discount"><b>2,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon40.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon18.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/29">
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>44</div>
+								<a href="/shop/view/151">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201805/1526628344phpv3HGZX.jpg"><br>
+									<p class="name">쫀쫀피부 10일 10팩세트_론리비즈마스크팩*10 [1+1/exp:2018-11-19]</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>15,000원</del></p>
+												<p class="discount"><b>9,900</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon04.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon09.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/151">프로폴리스추출물, 로얄젤리추출물<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>45</div>
+								<a href="/shop/view/87">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/pocket/200.jpg"><br>
+									<p class="name">에코 주머니</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>1,500원</del></p>
+												<p class="discount"><b>1,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/87">
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>46</div>
+								<a href="/shop/view/113">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201611/1478857350phpYfTEm8.jpg"><br>
+									<p class="name">누리숲 스프레이 공병 30ml</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>3,000원</del></p>
+												<p class="discount"><b>1,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/113">
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>47</div>
+								<a href="/shop/view/157">
+									<img class="goods_img" src="http://static.nurisoop.co.kr/images/goods/suncream/200.jpg"><br>
+									<p class="name">누리촉촉 병풀 썬크림 [exp: 2018-12-20]</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>28,000원</del></p>
+												<p class="discount"><b>8,900</b>원</p>
+											</div>
+
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/157">병풀추출물, 티타늄디옥사이드,<br> 징크옥사이드, 갈락토미세스발효여과물<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>48</div>
+								<a href="/shop/view/155">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201807/1531361694phpCyat1W.jpg"><br>
+									<p class="name">가지솔 시카 토너/크림 2종세트</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>42,000원</del></p>
+												<p class="discount"><b>34,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon25.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon14.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/155">가지추출물, 병풀추출물,<br> 루페올, 마데카소사이드,<br> 판테놀
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>49</div>
+								<a href="/shop/view/146">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201803/1520485851phpIBrgMA.jpg"><br>
+									<p class="name">등드름 클리어 바디브러쉬</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>9,900원</del></p>
+												<p class="discount"><b>8,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon18.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon14.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon22.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/146">천연모 소재의 분리형 브러쉬
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>50</div>
+								<a href="/shop/view/117">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201612/1482305530phpqwDng5.jpg"><br>
+									<p class="name">누리숲 소프트 해면 (단품)</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>5,000원</del></p>
+												<p class="discount"><b>2,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/117">
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>51</div>
+								<a href="/shop/view/153">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201807/1531356638phpL6qePT.jpg"><br>
+									<p class="name">가지솔 시카 토너</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>20,000원</del></p>
+												<p class="discount"><b>16,500</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon25.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon12.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon13.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/153">가지추출물, 병풀추출물,<br> 루페올, 판테놀<br>
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>52</div>
+								<a href="/shop/view/118">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201611/1479201276phpzPHANS.jpg"><br>
+									<p class="name">누리숲 버블버블망</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>5,000원</del></p>
+												<p class="discount"><b>3,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon02.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/118">
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>53</div>
+								<a href="/shop/view/154">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201807/1531358453php9aXcvN.jpg"><br>
+									<p class="name">가지솔 시카 크림</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>22,000원</del></p>
+												<p class="discount"><b>18,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon25.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon14.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/154">루페올, AHA,<br> BHA, 마데카소사이드<br>
+								</a>
+							</p></li>
+
+							<li>
+								<div class="best">BEST<br>54</div>
+								<a href="/shop/view/108">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201610/1476433305php7t7Rfo.jpg"><br>
+									<p class="name">브라운 에코포켓</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>3,000원</del></p>
+												<p class="discount"><b>2,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon18.gif" style="margin-left:3px;"><img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon23.gif" style="margin-left:3px;">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/108">
+								</a>
+							</p></li>
+						</ul><ul class="list">
+							<li>
+								<div class="best">BEST<br>55</div>
+								<a href="/shop/view/130">
+									<img class="goods_img" src="http://file.nurisoop.co.kr/goods/201702/1487062739php5SznYQ.jpg"><br>
+									<p class="name">누리숲 쇼핑백</p>
+									<div class="priceBox">
+												<p class="price01" style="float: left;width: 76px;font-size: 11px;margin-top: 0 important;padding-top: 3px;text-align: right;"><del>3,000원</del></p>
+												<p class="discount"><b>1,000</b>원</p>
+											</div>
+									<img src="http://static.nurisoop.co.kr/images/goods_icons/good_icon39.gif">
+
+
+									</a><p style="font-family: '돋움', Dotum, sans-serif;font-size: 11px;color: #6f6f6f;line-height: 15px;"><a href="/shop/view/130">
+								</a>
+							</p></li>
+						</ul></span>
+		</div>
+	</div>
+	<!--//-->
+	
+	<div id="benefit">
+		<input type="hidden" name="mainTabBannerNo" id="mainTabBannerNo" value="0">
+		<h3><img src="http://static.nurisoop.co.kr/images/img/main_tit_benefit.png" alt="누리숲회원혜택"></h3>
+		<div class="rolling">
+			<div class="img">
+				<ul>
+				<li style="display:block;"><a href="/event/view/5"><img src="http://static.nurisoop.co.kr/images/img/main_benefit01.jpg" alt="신규회원 적립금"></a></li>
+				<li style="display:none;"><a href="/event/view/5"><img src="http://static.nurisoop.co.kr/images/img/main_benefit02.jpg" alt="사은품 지급"></a></li>
+				<li style="display:none;"><a href="javascript:void(0);"><img src="http://static.nurisoop.co.kr/images/img/main_benefit03.jpg" alt="회원등급혜택"></a></li>
+				<li style="display:none;"><a href="/event/attendance"><img src="http://static.nurisoop.co.kr/images/event/20150901/main.jpg" alt="출석체크"></a></li>
+				</ul>
+			</div>
+			<div class="btn">
+				<a href="javascript:mainTabBanner2('up');"><img src="http://static.nurisoop.co.kr/images/img/btn_benefit_up.jpg" alt="위로"></a>
+				<ul>
+					<li onmouseover="mainTabBanner(this);"><a href="javascript:viud(0);" class="on">신규회원 적립금</a></li>
+					<li onmouseover="mainTabBanner(this);"><a href="javascript:viud(0);">사은품 지급</a></li>
+					<li onmouseover="mainTabBanner(this);"><a href="javascript:viud(0);">회원등급별혜택</a></li>
+					<li onmouseover="mainTabBanner(this);"><a href="javascript:viud(0);">출석체크</a></li>
+				</ul>
+				<a href="javascript:mainTabBanner2('down');"><img src="http://static.nurisoop.co.kr/images/img/btn_benefit_down.jpg" alt="아래로"></a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="review_sns">
+		<div id="review">
+			<h3><img src="http://static.nurisoop.co.kr/images/img/main_tit_review.png" alt="베스트리뷰"></h3>
+			<div class="contents">
+				<form method="" action="">
+					<fieldset>
+						<table class="review_t">
+							<colgroup>
+								<col width="150">
+								<col width="380">
+							</colgroup>
+															<tbody><tr>
+								<td rowspan="2" align="center"><a href="/shop/view/153/?review=13039&amp;#tab02"><img src="http://file.nurisoop.co.kr/goods/201807/1531356808phptlrCPR.jpg" class="review_img" style="max-width:80px; max-height:80px;"></a></td>
+								<td align="left" height="25"><img src="http://static.nurisoop.co.kr/images/img/bullet_review1.jpg" class="p_r_5"><a href="/shop/view/153/?review=13039&amp;#tab02"> <b>[가지솔 시카 토너]</b> <span class="star">★★★★★</span></a></td>
+							</tr>
+							<tr>
+								<td class="p_l_20" align="left" height="100">
+									<div style="width:280px;"><a href="/shop/view/153/?review=13039&amp;#tab02">저는 일단 후기, 리뷰 같은거 적립금 줘도 잘 안올립니다.
+왜냐면 귀찮거든요.
+근데 이건 안남길 수가 없어서 노트북을 켰습니다.
+일단 배송이 너무 빨랐어..</a> </div>
+								</td>
+							</tr>
+							<tr><td colspan="2" class="dot" height="1"></td></tr>
+																	<tr>
+										<td colspan="2" class="p_l_20" align="left" height="30"><div style="width:96%;" class="text_overflow"><img src="http://static.nurisoop.co.kr/images/img/bullet_review2.jpg" class="p_r_5"><a href="/shop/view/8/?review=13009&amp;#tab02">[포레스트 녹삼초 폼클렌저 [exp..] 와 배송도 진짜 빠르고 원플러스원 ..</a></div></td>
+									</tr>
+									<tr><td colspan="2" class="dot" height="1"></td></tr>
+																	<tr>
+										<td colspan="2" class="p_l_20" align="left" height="30"><div style="width:96%;" class="text_overflow"><img src="http://static.nurisoop.co.kr/images/img/bullet_review3.jpg" class="p_r_5"><a href="/shop/view/152/?review=12995&amp;#tab02">[물찬피부 10일 10팩세트_워터밸런스..] 1일 1팩 하기 좋아요</a></div></td>
+									</tr>
+									<tr><td colspan="2" class="dot" height="1"></td></tr>
+																	<tr>
+										<td colspan="2" class="p_l_20" align="left" height="30"><div style="width:96%;" class="text_overflow"><img src="http://static.nurisoop.co.kr/images/img/bullet_review4.jpg" class="p_r_5"><a href="/shop/view/155/?review=12989&amp;#tab02">[가지솔 시카 토너/크림 2종세트] 벌써 두통째...</a></div></td>
+									</tr>
+									<tr><td colspan="2" class="dot" height="1"></td></tr>
+																	<tr>
+										<td colspan="2" class="p_l_20" align="left" height="30"><div style="width:96%;" class="text_overflow"><img src="http://static.nurisoop.co.kr/images/img/bullet_review5.jpg" class="p_r_5"><a href="/shop/view/137/?review=12945&amp;#tab02">[투명피부 10일 10팩세트_갈락토마..] 진짜 강추!!! 인생팩</a></div></td>
+									</tr>
+									<tr><td colspan="2" class="dot" height="1"></td></tr>
+														</tbody></table>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div id="photo">
+			<h3><img src="http://static.nurisoop.co.kr/images/img/main_tit_photo.png" alt="포토리뷰"></h3>
+			<div class="contents">
+				<table class="photo_t">
+					<colgroup>
+						<col width="171">
+						<col width="30">
+						<col width="171">
+						<col width="30">
+						<col width="171">
+					</colgroup>
+					<tbody><tr>
+													<td>
+							<a href="/community/photoView/13097">
+							<div style="height:124px;margin:auto;overflow-y:hidden;"><img src="http://file.nurisoop.co.kr/community/201809/1536906437php2v2A5G.jpeg" width="171px"></div>
+							<p class="tit">있어도 계속 사요</p>
+							<p class="goods">[누리촉촉 워터밸런스 스..]</p>
+							<p class="txt" style="word-wrap:break-word;word-break:break-all;">한 달에 한번씩은 꼭 누리숲에서 뭐라두 사게되는데, 이번달에는 대용량 출시기냠 이벤트를 하네요! 그래서 집에 있는.. </p></a>
+						</td>
+						<td><img src="http://static.nurisoop.co.kr/images/img/dot_line3.jpg"></td>							<td>
+							<a href="/community/photoView/13087">
+							<div style="height:124px;margin:auto;overflow-y:hidden;"><img src="http://file.nurisoop.co.kr/community/201809/1536679451phpFIBJN8.jpeg" width="171px"></div>
+							<p class="tit">가지솔 시카 토너&amp;크..</p>
+							<p class="goods">[가지솔 시카 토너/크림 2..]</p>
+							<p class="txt" style="word-wrap:break-word;word-break:break-all;">새로 나왔다고하여 이번에 구입했어요
+누리숲제품은 항상 믿고 구입하고 있어요
+하루 사용해봤는데 역시 너무만족합니.. </p></a>
+						</td>
+						<td><img src="http://static.nurisoop.co.kr/images/img/dot_line3.jpg"></td>							<td>
+							<a href="/community/photoView/13078">
+							<div style="height:124px;margin:auto;overflow-y:hidden;"><img src="http://file.nurisoop.co.kr/community/201809/1536499752phptpHD6d.jpeg" width="171px"></div>
+							<p class="tit">좋아요</p>
+							<p class="goods">[론리비즈 프로폴리스 85 ..]</p>
+							<p class="txt" style="word-wrap:break-word;word-break:break-all;">이건 매번 믿고 쓰는 최애 앰플입니다
+너무너무좋아요 </p></a>
+						</td>
+												</tr>
+				</tbody></table>
+			</div>
+		</div>
+	</div>
+	
+	<div id="main_banner02">
+		<a href="/shop/view/7" target="_top"><img src="http://static.nurisoop.co.kr/images/img/main_garobn02.jpg" alt="포레스트리페어크림"></a>
+	</div>
+	
+	<div id="info">
+		<ul>
+			<li class="m_r_10"><img src="http://static.nurisoop.co.kr/images/img/main_customer.jpg" alt="누리숲 고객센터"></li>
+			<li class="m_r_10"><img src="http://static.nurisoop.co.kr/images/img/main_bank.jpg" alt="계좌정보"></li>
+			<li class="link">
+			<table>
+			<tbody><tr>
+			<td><span class="quick01" alt="무료샘플신청"><a href="/customer/sample/"></a></span></td>
+			<td><span class="quick02" alt="할인쿠폰"><a href="/mypage/coupon/"></a></span></td>
+			</tr>
+			<tr>
+			<td><span class="quick03" alt="1:1문의하기"><a href="/customer/qnaList"></a></span></td>
+			<td><span class="quick04" alt="주문/배송조회"><a href="/mypage/orderList"></a></span></td>
+			</tr>
+			</tbody></table>
+			</li>
+			<li class="notice">
+			<table>
+			<tbody><tr><td><img src="http://static.nurisoop.co.kr/images/img/main_notice.jpg"></td></tr>
+							<tr><td class="p_l_10" height="28"><div style="width:330px; height:16px;" class="text_overflow"><img src="http://static.nurisoop.co.kr/images/img/bullet_notice.jpg"> <a href="/customer/noticeView/92/">2018년 추석 연휴 배송 안내</a></div></td></tr>
+			<tr class="dot"><td height="1"></td></tr>
+							<tr><td class="p_l_10" height="28"><div style="width:330px; height:16px;" class="text_overflow"><img src="http://static.nurisoop.co.kr/images/img/bullet_notice.jpg"> <a href="/customer/noticeView/91/">친구추천 적립금 지급 및 사용 공지 (2018년 9월 3일 공지)</a></div></td></tr>
+			<tr class="dot"><td height="1"></td></tr>
+							<tr><td class="p_l_10" height="28"><div style="width:330px; height:16px;" class="text_overflow"><img src="http://static.nurisoop.co.kr/images/img/bullet_notice.jpg"> <a href="/customer/noticeView/90/">누리숲 샘플킷 신청 폭주로 인한 배송지연 안내</a></div></td></tr>
+			<tr class="dot"><td height="1"></td></tr>
+							</tbody></table>
+			</li>
+		</ul>
+	</div>
+	
+	<!--180917 팝업영역-->
+	<!--<div class="pop-wrap delDelay-tg-wrap">
+		<div class="back-bg"></div>
+		<div class="pop-area delDelay-tg">
+			<div class="pop-contents">
+				<a href="http://www.nurisoop.co.kr/customer/noticeView/92" target="_blank"><img src="http://static.nurisoop.co.kr/images/pop/delDelay_tg.png" alt="추석연휴배송안내"></a>
+				<div class="bottom cf">
+					<span class="flt-1"><input type="checkbox" id="dayChk"> <label for="dayChk">오늘 하루동안 보지 않기</label></span>
+					<span class="flt-2"><a href="javascript:;" onclick="popCls('.pop-wrap')" class="clsBtn">닫기</a></span>
+				</div>
+			</div>
+		</div>
+		<script>function popCls(el) {$(el).hide();}</script>
+	</div>-->
+	
+	<!-- 190123 설연휴 배송안내 팝업 -->
+	<!--<div class="pop-wrap newYear-tg-wrap">
+		<div class="back-bg"></div>
+		<div class="pop-area delDelay-tg">
+			<div class="pop-contents">
+				<a href="http://www.nurisoop.co.kr/customer/noticeView/92" target="_blank" title="페이지 이동"><img src="http://static.nurisoop.co.kr/images/pop/newYear_tg.jpg" alt="설연휴배송안내"></a>
+				<div class="bottom cf">
+					<span class="flt-1"><input type="checkbox" id="dayChk"> <label for="dayChk">오늘 하루동안 보지 않기</label></span>
+					<span class="flt-2"><a href="javascript:;" onclick="popCls('.pop-wrap')" class="clsBtn">닫기</a></span>
+				</div>
+			</div>
+		</div>
+		<script>function popCls(el) {$(el).hide();}</script>
+	</div>-->
+	
+	<!-- 190430 어린이날 대체공휴일 배송안내 팝업 -->
+	<div class="pop-wrap holidayMay-tg-wrap"> 
+		<div class="back-bg"></div>
+		<div class="pop-area delDelay-tg">
+			<div class="pop-contents">
+				<a href="http://www.nurisoop.co.kr/customer/noticeView/87" target="_blank" title="페이지 이동"><img src="http://static.nurisoop.co.kr/images/pop/holidayMay19_tg.jpg" alt="누리숲 대체공휴일 배송안내"></a>
+				<div class="bottom cf">
+					<span class="flt-1"><input type="checkbox" id="dayChk"> <label for="dayChk">오늘 하루동안 보지 않기</label></span>
+					<span class="flt-2"><a href="javascript:;" onclick="popCls('.pop-wrap')" class="clsBtn">닫기</a></span>
+				</div>
+			</div>
+		</div>
+		<script>function popCls(el) {$(el).hide();}</script>
+	</div>
+	<!--//-->
+	
+	<link rel="stylesheet" type="text/css" href="http://static.nurisoop.co.kr/css/footer.css">
+	<div id="Footer" style="clear:both">
+		<div class="f-area">
+			<div class="f-top">
+				<div class="policy">
+					<a href="javascript:winOpen('/company/agreement', '', 840, 800);">이용약관</a>
+					&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+					<a href="javascript:winOpen('/company/policy', '', 840, 800);"><b><font color="white">개인정보처리방침</font></b></a>
+					&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+					<a href="/company/brand">회사소개</a>
+					&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+					<a href="/customer/howto">이용안내</a>
+					&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+					<a href="javascript:winOpen('/company/contact', '', 737, 640);">제휴안내</a>
+					&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+					<a href="/customer/qna">1:1문의하기</a>
+				</div>
+				<div class="family">
+					<div class="fam_btn_m"><a href="javascript:fsite.click_family();">Family Site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▲</a></div>
+					<div id="family_list">
+						<iframe src="http://www.nurisoop.co.kr/site/familySite.php" style="width:100%;" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="f-bottom">
+				<div class="f_logo"><img src="http://static.nurisoop.co.kr/images/img/logo_footer_g.png" alt=""></div>
+				<div class="address">
+					<p>
+						<strong>(주)이비즈네트웍스</strong><br>
+						<span>
+							대표이사 : 박기범<br>
+							주소 : 06178 서울특별시 강남구 테헤란로 82길 15, 14층 (대치동,디아이타워)<br>
+							FAX : 070-8277-5511 | 개인정보관리자 : 박준수<br>
+							사업자등록번호 : 220-87-30865 <a href="http://ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2006322008330211501&amp;area1=&amp;area2=&amp;currpage=1&amp;searchKey=04&amp;searchVal=2208730865&amp;stdate=&amp;enddate=" target="_blank"><img src="http://static.nurisoop.co.kr/images/btn_copyinfo_gray.gif"></a><br>
+							통신판매업 신고번호 : 강남-11501호<br>
+							의료기기판매업 영업신고번호 : 제 4730호							</span>
+					</p>
+					<p class="copy">Copyright©EbizNetworks. All Rights Reserved.</p>
+				</div>
+				<ul class="customer">
+					<li class="f_call">
+						<p>고객센터</p>
+						<strong>1688-6093</strong>
+					</li>
+					<li class="f_mail">
+						<p>E-mail 문의</p>
+						<a href="mailto:nurisoop@ebiznetworks.co.kr">
+							<strong>
+								nurisoop@<br>
+								ebiznetworks.co.kr
+							</strong>
+						</a>
+					</li>
+				</ul>
+				<script>
+					function pop_taxpayer() {
+						var win_tax	= window.open('/mypage/taxpayer','taxpayer','scrollbars=no,resizable=no,width=510,height=720');
+					}
+				</script>
+				<div class="four-list">
+					<img src="http://static.nurisoop.co.kr/images/f_ico01.gif" border="0" alt="벤처기업 기술보증금">
+					<img src="http://static.nurisoop.co.kr/images/f_ico02.gif" border="0" alt="기술혁신형 중소기업">
+					<img src="http://static.nurisoop.co.kr/images/f_ico03.gif" border="0" alt="병역특례업체 병무청">
+					<a href="javascript:pop_taxpayer();"><img src="http://static.nurisoop.co.kr/images/f_ico04.gif" border="0" alt="2013년 모범납세자상 서울지방국세청장"></a>
+					<img src="http://static.nurisoop.co.kr/images/f_ico05.gif" border="0" alt="서울특별시모범납세자">
+					<img src="http://static.nurisoop.co.kr/images/f_ico06.gif" border="0" alt="공정거래위원회">
+					<img src="http://static.nurisoop.co.kr/images/f_ico07.gif" border="0" alt="ESCROW 안전결제">
+					<img src="http://static.nurisoop.co.kr/images/f_ico08.gif" border="0" alt="로젠택배">
+					<img src="http://static.nurisoop.co.kr/images/f_ico09.gif" border="0" alt="매매보호의 기준 KB에스크로이체">
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--//-->
+	
+	
+</body>
+</html>

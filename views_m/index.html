@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta http-equiv="cleartype" content="on">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=720, user-scalable=no , target-densitydpi=device-dpi">
+	<!---<meta name='viewport' content='user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width' />-->
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Android icon -->
+	<link rel="shortcut icon" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop128x128.png">
+	<!-- iPhone icon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop57x57.png">
+	<!-- iPad icon -->
+	<link rel="apple-touch-icon" sizes="72x72" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop72x72.png">
+	<!-- iPhone icon(Retina) -->
+	<link rel="apple-touch-icon" sizes="114x114" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop114x114.png">
+	<!-- iPad icon(Retina) -->
+	<link rel="apple-touch-icon" sizes="144x144" href="http://static.nurisoop.co.kr/images/m/icon_nurisoop144x144.png">
+	<meta charset="UTF-8">
+	<title>누리숲</title>
+
+	<link rel="stylesheet" href="http://static.nurisoop.co.kr/css/reset.css">
+	<link rel="stylesheet" href="http://static.nurisoop.co.kr/css/layout_m.css">
+	<link rel="stylesheet" href="http://static.nurisoop.co.kr/css/layout_m_new.css">
+	<!--<link rel="stylesheet" href="../static/css/layout_m_new.css">-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	<script src="http://static.nurisoop.co.kr/js/jquery.min.js"></script>
+	<script src="http://static.nurisoop.co.kr/js/common.js"></script>
+<!--
+	<script src="http://static.nurisoop.co.kr/js/iscroll.js"></script>
+	<script src="http://static.nurisoop.co.kr/js/mobile.js"></script>
+	<script src="http://static.nurisoop.co.kr/js/bookmark.js"></script>
+	<script src="http://static.nurisoop.co.kr/js/jquery.cookie.min.js"></script>
+	<script src="http://static.nurisoop.co.kr/js/cookie.js"></script>
+-->
+
+</head>
+<body>
+	
+	<!--<div id="app33_topbar" style="width:100%; text-align:center; background-color:#acf9ff;">
+	    <a href="/event/view/88"><img style="width:100%;" src="http://static.nurisoop.co.kr/images/event/33app/top_33app_m.png" alt="진행중인 이벤트"></a>
+	    <div style="position:absolute; top:10px; right:26px;">
+        	<a href="javascript:hide_app33_banner();"><i class="fa fa-times-circle-o fa-3x" aria-hidden="true" style="color:#333;"></i></a>
+		</div>
+    </div>-->
+	
+	<div id="wrap">
+			<!---이전버튼-->
+		<div id="go_back">
+			<a href="javascript:toBack();"><img src="http://static.nurisoop.co.kr/images/m/btn_back.png" alt="top"></a>
+		</div>
+		<!---탑버튼-->
+		<div id="top">
+			<a href="javascript:toTop();"><img src="http://static.nurisoop.co.kr/images/m/btn_top.png" alt="top"></a>
+		</div>
+
+		<header id="header">
+									<p class="logo"><a href="http://m.nurisoop.co.kr"><span>nurisoop</span></a></p>
+
+
+			<div class="gmb">
+				<ul class="clearfix">
+					<li class="menu">
+						<a href="javascript:lnbMenuOpen();">
+							<span>Menu</span>
+						</a>
+					</li>
+					<li class="my">
+						<a href="/mypage">
+							<span>My</span>
+						</a>
+					</li>
+					<li class="srch">
+						<a href="javascript:viewSearchBar();">
+							<span>Search</span>
+						</a>
+					</li>
+					<li class="cart">
+						<a href="/mypage/cartList">
+							<span>Cart</span>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<!-- // gmb -->
+		</header>
+	<script type="text/javascript">
+	function viewSearchBar() {
+		var chk = $("#search").css("display");
+		if(chk == "none") { $("#search").css("display", "block"); }
+		else { $("#search").css("display", "none"); }
+	}
+	</script>
+		<div id="gnbWrap">
+			<nav class="gnbUIO">
+				<ul>
+									<li style="border-left:none"><a href="/shop/sListD/001"><span>기능별</span></a></li>
+					<li><a href="/shop/sListD/003"><span>피부고민별</span></a></li>
+					<li><a href="/shop/sListD/005"><span>세트상품</span></a></li>
+					<li><a href="/shop/sListD/006"><span>성분별</span></a></li>
+					<li><a href="/shop/sListD/002"><span>피부타입별</span></a></li>
+				</ul>
+			</nav>
+		</div>
+
+
+
+		<div id="search" style="display:none;">
+			<form name="topSearchForm" method="get" action="/shop/sListD/">
+				<input name="topSrch" type="text" value="" style="width:600px;margin-right:10px;">
+				<a href="javascript:document.topSearchForm.submit();"><img src="http://static.nurisoop.co.kr/images/m/icon_search2.png" alt="검색"></a>
+			</form>
+		</div>
+		<div id="menuWrap" style="z-index:1000001; top:0px; overflow:hidden; width:720px;">
+		<div id="menu" style="z-index:1000001;">
+			<div id="menu_fix" style="position:relative; left:0px; height:1000px; width:720px;">
+				<div id="box" style="overflow:hidden;width:100%;">
+					<div class="link">
+						<h3>기능별</h3><table width="100%"><colgroup><col width="50%"><col width="50%"></colgroup><tbody><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/001002';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 스킨/로션</td><td style="cursor:hand" onclick="location.href='/shop/sListD/001003';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 크림/앰플/오일</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/001007';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 썬크림/비비크림</td><td style="cursor:hand" onclick="location.href='/shop/sListD/001004';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 클렌징/팩/각질제거</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/001005';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 세트상품</td><td style="cursor:hand" onclick="location.href='/shop/sListD/001008';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 마스크팩</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/001009';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 바디</td><td style="cursor:hand" onclick="location.href='/shop/sListD/001006';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 화장소품</td></tr></tbody></table><h3>피부고민별</h3><table width="100%"><colgroup><col width="50%"><col width="50%"></colgroup><tbody><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/003007';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 피부진정</td><td style="cursor:hand" onclick="location.href='/shop/sListD/003002';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 트럽</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/003001';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 수분 &amp; 보습</td><td style="cursor:hand" onclick="location.href='/shop/sListD/003004';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 모공 &amp; 탄력</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/003006';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 미백 &amp; 주름개선</td><td style="cursor:hand" onclick="location.href='/shop/sListD/003003';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 자생</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/003005';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 각질제거</td><td style="cursor:hand" onclick="location.href='/shop/sListD/003008';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 눈가 &amp; 목주름 관리</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/003012';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 레이저 &amp; 흔적관리</td><td style="cursor:hand" onclick="location.href='/shop/sListD/003009';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 자외선차단</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/003010';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 속당김</td><td style="cursor:hand" onclick="location.href='/shop/sListD/003011';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 붉은톤</td></tr></tbody></table><h3>세트상품</h3><table width="100%"><colgroup><col width="50%"><col width="50%"></colgroup><tbody><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/005010';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 포레스트 라인</td><td style="cursor:hand" onclick="location.href='/shop/sListD/005009';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 수분관리 라인</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/005006';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 트럽케어 라인</td><td style="cursor:hand" onclick="location.href='/shop/sListD/005004';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 누리촉촉 라인</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/005003';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 자생관리 라인</td><td style="cursor:hand" onclick="location.href='/shop/sListD/005002';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 각질관리 라인</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/005001';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 대나무숲 라인</td><td style="cursor:hand" onclick="location.href='/shop/sListD/005011';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 아로니아 라인</td></tr></tbody></table><h3>성분별</h3><table width="100%"><colgroup><col width="50%"><col width="50%"></colgroup><tbody><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006002';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 히알루론산</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006011';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 대나무</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006003';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 프로폴리스</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006008';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 어성초/EGCG</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006006';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 병풀</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006012';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 아로니아</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006005';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> EGF</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006009';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 씨벅톤(산자나무)</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006001';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 효모</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006013';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 봉독</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006007';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 녹차</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006014';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 갈락토미세스</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006015';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 세라마이드</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006016';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 스쿠알란</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006017';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 나이아신아마이드</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006018';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 쉐어버터</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006019';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 알로에</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006022';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 비피다</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006024';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 펩타이드</td><td style="cursor:hand" onclick="location.href='/shop/sListD/006023';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 해바라기씨오일</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/006025';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 올리브</td></tr></tbody></table><h3>피부타입별</h3><table width="100%"><colgroup><col width="50%"><col width="50%"></colgroup><tbody><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/002004';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 지성</td><td style="cursor:hand" onclick="location.href='/shop/sListD/002005';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 민감성</td></tr><tr><td style="cursor:hand" onclick="location.href='/shop/sListD/002003';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 복합성</td><td style="cursor:hand" onclick="location.href='/shop/sListD/002002';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 건성</td></tr></tbody></table>					<h3>이벤트</h3>
+						<table width="100%">
+							<colgroup>
+								<col width="50%">
+								<col width="50%">
+							</colgroup>
+							<tbody><tr>
+								<td style="cursor:hand" onclick="location.href='/event';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 이벤트</td>
+								<td style="cursor:hand" onclick="location.href='/event/attendance';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 출첵 이벤트</td>
+							</tr>
+							<tr>
+								<td style="cursor:hand" onclick="location.href='/event/winners';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 당첨자 발표</td>
+							</tr>
+						</tbody></table>
+
+						<h3>커뮤니티</h3>
+						<table width="100%">
+							<colgroup>
+								<col width="50%">
+								<col width="50%">
+							</colgroup>
+							<tbody><tr>
+								<td style="cursor:hand" onclick="location.href='/community/photo';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 포토리뷰</td>
+								<td style="cursor:hand" onclick="location.href='/community/review';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 사용후기</td>
+							</tr>
+							<tr>
+								<td style="cursor:hand" onclick="location.href='/community/qna';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 상품 Q&amp;A</td>
+							</tr>
+						</tbody></table>
+
+						<h3>고객센터</h3>
+						<table width="100%">
+							<colgroup>
+								<col width="50%">
+								<col width="50%">
+							</colgroup>
+							<tbody><tr>
+								<td style="cursor:hand" onclick="location.href='/customer/notice';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 공지사항</td>
+								<td style="cursor:hand" onclick="location.href='/customer/news';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 누리숲 뉴스</td>
+							</tr>
+							<tr>
+								<td style="cursor:hand" onclick="location.href='/customer/faq';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 자주하는 질문</td>
+								<td style="cursor:hand" onclick="location.href='/customer/howto';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 이용안내</td>
+							</tr>
+							<tr>
+								<td style="cursor:hand" onclick="location.href='/customer/sample';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 무료샘플신청</td>
+								<td style="cursor:hand" onclick="location.href='/customer/qna';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 1:1문의하기</td>
+							</tr>
+							<tr>
+								<td style="cursor:hand" onclick="location.href='/user2/auth';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 본인인증하기</td>
+								<td style="cursor:hand" onclick="location.href='/customer/ingre';"><img src="http://static.nurisoop.co.kr/images/m/icon_leaf.png"> 성분사전</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div class="close">
+						<a href="javascript: lnbMenuOpen();"><img src="http://static.nurisoop.co.kr/images/m/btn_close.png" alt="닫기"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!--// menu -->	
+
+
+<!--		<link rel="stylesheet" href="http://static.nurisoop.co.kr/css/layout_m_new.css">-->
+
+	<!-- [S] 메인 레이어팝업 -->
+	<script src="http://static.nurisoop.co.kr/js/jquery.cookie.min.js"></script>
+	<script src="http://static.nurisoop.co.kr/js/cookie.js"></script>
+
+
+
+	<script type="text/javascript" src="http://static.nurisoop.co.kr/js/idangerous.swiper.js"></script>
+	<script type="text/javascript" src="http://static.nurisoop.co.kr/js/shop.js"></script>
+	<script type="text/javascript">
+	$(window).ready(function() {
+		var mySwiper = new Swiper('.slidee',{
+		pagination: '.slidee > .loca',
+		loop:true,
+		grabCursor: true,
+		paginationClickable: true
+		})
+		var mySwiper = new Swiper('.type_goods_info_0',{
+			pagination: '.type_goods_info_0 > .loca',
+			loop:true,
+			grabCursor: true,
+			paginationClickable: true
+		})
+		var mySwiper = new Swiper('.type_goods_info_1',{
+			pagination: '.type_goods_info_1 > .loca',
+			loop:true,
+			grabCursor: true,
+			paginationClickable: true
+		})
+		var mySwiper = new Swiper('.type_goods_info_2',{
+			pagination: '.type_goods_info_2 > .loca',
+			loop:true,
+			grabCursor: true,
+			paginationClickable: true
+		})
+		var mySwiper = new Swiper('.type_goods_info_3',{
+			pagination: '.type_goods_info_3 > .loca',
+			loop:true,
+			grabCursor: true,
+			paginationClickable: true
+		})
+	});
+	var tabAdd		= true;	// 실행여부
+	var tabCate		= "";	// 카테고리
+	var listCount	= 0;	// 뽑힌갯수
+	var listLimit	= 6;	// 뽑을 갯수
+
+	function viewGoodsInfoTab(no, subno, num){
+		tabDel();
+		switch(no){
+			case 0 :
+				tabCate = 'NM_MALL';
+			break;
+			case 1 :	
+				tabCate = 'NM_RECOM_A';
+			break;
+			case 2 :		
+				tabCate = 'NM_RECOM_B';
+			break;
+			case 3 :	
+				tabCate = 'NM_MNEW';
+			break;
+		}
+
+		if(num != null && num > 0){
+			selCate(num);
+		} else {
+			selCate(listLimit);
+		}
+
+		$("#gnbWrap2 > .gnbUIO > ul > li").removeClass("on");
+		$("#gnbWrap2 > .gnbUIO > ul > li").eq(no).addClass("on");
+
+		$("#gnbWrap3 > .gnbUIO2 > ul > li").removeClass("on");
+		$("#gnbWrap3 > .gnbUIO2 > ul > li").eq(subno).addClass("on");
+
+		$("#gnbWrap4 > .gnbUIO3 > ul > li").removeClass("on");
+		$("#gnbWrap4 > .gnbUIO3 > ul > li").eq(subno).addClass("on");
+	}
+
+	function tabDel(){
+		$("#gnbWrap3, #gnbWrap4").hide();
+	}
+
+	function selCate(num){
+
+		tabAdd	= true;
+		$("#mainList").html("");
+		listCount	= 0;
+
+		ajaxList(num);
+	}
+
+	function ajaxList(num){
+		if(tabAdd){
+			tabAdd = false;
+
+			$.ajax({
+				url : "/main/mainRecomAjaxAuto/"+tabCate+"/"+num+"/"+listCount,
+				success:function(data){
+
+					var tmp	= data.split("||");
+					tmp[0]	= parseInt(tmp[0]);
+
+					if(tmp[0] > 0) {
+						listCount	+= tmp[0];
+						$("#mainList").html(tmp[1]);
+						tabAdd	= true;
+					}
+
+				}
+			});
+
+		}
+	}
+
+	$(document).ready(function () {
+
+		$("#gnbWrap3, #gnbWrap4").hide();
+
+		viewGoodsInfoTab(0, 0, 9);	
+
+		$(window).scroll(function(){
+			/*
+			var sclBtm	= parseInt($(window).scrollTop())+1400;
+			var curBtm	= parseInt($("#mainList").height()) + parseInt($("#mainList").offset().top);
+			if(sclBtm > curBtm){
+			*/
+				ajaxList(listLimit);
+			/*
+			}
+			*/
+		});
+	});
+	</script>
+	<style type="text/css">
+	.gooods_linka { selector-dummy: expression(this.hideFocus=true; border:0; outline:none;}
+	</style>
+
+		<div id="banner">
+			<div class="slidee" style="cursor: -webkit-grab;">
+				<ul class="swiper-wrapper swipe_area" style="width: 5760px; height: 320px; transform: translate3d(-720px, 0px, 0px); transition-duration: 0s;"><li xmlns="http://www.w3.org/1999/xhtml" class="swiper-slide" style="width: 720px; height: 320px;"><a href="/shop/view/7/" target="_top"><img src="http://file.nurisoop.co.kr/banner/201510/1444725101phpcdP0EW.jpg" alt="포레스트 리페어크림" style="max-width:720px;max-height:320px;"></a></li>
+					<li class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 720px; height: 320px;"><a href="http://www.nurisoop.co.kr/event/view/191" target="_top"><img src="http://file.nurisoop.co.kr/banner/201808/1535524475phpNILcYc.jpg" alt="대용량 스킨 출시기념♥" style="max-width:720px;max-height:320px;"></a></li><li class="swiper-slide" style="width: 720px; height: 320px;"><a href="https://shopping.naver.com/beauty/stores/100144492" target="_blank"><img src="http://file.nurisoop.co.kr/banner/201805/1525224126phpPLFdTW.jpg" alt="네이버쇼핑 단독특가!" style="max-width:720px;max-height:320px;"></a></li><li class="swiper-slide" style="width: 720px; height: 320px;"><a href="/event/view201603" target="_top"><img src="http://file.nurisoop.co.kr/banner/201802/1519795517phpjfndIn.jpg" alt="1+1 위클리 이벤트" style="max-width:720px;max-height:320px;"></a></li><li class="swiper-slide" style="width: 720px; height: 320px;"><a href="/event/view201612proposer" target="_top"><img src="http://file.nurisoop.co.kr/banner/201703/1490664932phpDTZnio.jpg" alt="친구와 함께 예뻐지고 적립금도 쌓자!" style="max-width:720px;max-height:320px;"></a></li><li class="swiper-slide" style="width: 720px; height: 320px;"><a href="/event/view/25/" target="_top"><img src="http://file.nurisoop.co.kr/banner/201705/1494483931php0ScCua.jpg" alt="후기쓰고 적립금 받자!" style="max-width:720px;max-height:320px;"></a></li><li class="swiper-slide" style="width: 720px; height: 320px;"><a href="/shop/view/7/" target="_top"><img src="http://file.nurisoop.co.kr/banner/201510/1444725101phpcdP0EW.jpg" alt="포레스트 리페어크림" style="max-width:720px;max-height:320px;"></a></li>			<li xmlns="http://www.w3.org/1999/xhtml" class="swiper-slide" style="width: 720px; height: 320px;"><a href="http://www.nurisoop.co.kr/event/view/191" target="_top"><img src="http://file.nurisoop.co.kr/banner/201808/1535524475phpNILcYc.jpg" alt="대용량 스킨 출시기념♥" style="max-width:720px;max-height:320px;"></a></li></ul>
+				<div class="loca"><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span></div>
+			</div>
+			<div class="slidee">
+				<ul>
+								<li><a href="/event/view/5/?page=3" target="_top"><img src="http://static.nurisoop.co.kr/images/m/main_sbn03.png" alt="할인쿠폰증정"></a></li>
+					<!-- <li><a href="/customer/noticeView/84" target="_top"><img src="http://static.nurisoop.co.kr/images/m/bn_card_m.jpg" alt="무이자할부" /></a></li> -->
+					<!-- <li style="width:240px; height:238px;">
+						<div style="width:120px; height:119px; float:right;"><a href="http://blog.naver.com/nurisoop1004"><img src="http://static.nurisoop.co.kr/images/m/instagram_new.png" alt="인스타그램" style="padding:15px;"></a></div>
+						<div style="width:120px; height:119px;"><a href="http://blog.naver.com/nurisoop1004"><img src="http://static.nurisoop.co.kr/images/m/blog_new.png" alt="네이버블로그" style="padding:15px;"></a></div>
+						<div style="width:120px; height:119px; float:right;"><a href="https://www.facebook.com/nurisoop7979"><img src="http://static.nurisoop.co.kr/images/m/facebook_new.png" alt="페이스북" style="padding:15px;"></a></div>
+						<div style="width:120px; height:119px;"><a href="https://story.kakao.com/ch/nuritalk"><img src="http://static.nurisoop.co.kr/images/m/kakaostory_new.png" alt="카카오스토리" style="padding:15px;"></a></div>
+					</li> -->
+								<li><a href="/customer/samplekit" target="_top"><img src="http://static.nurisoop.co.kr/images/m/main_sbn06.png" alt="무료샘플신청"></a></li>
+									<li><a href="kakaoplus://plusfriend/home/_cKxefl" target="_top"><img src="http://static.nurisoop.co.kr/images/m/main_sbn07.png" alt="카카오톡상담"></a></li>
+													<li><a href="javascript: alert('로그인 후 이용해주세요.'); location.href='/user2/login';" target="_top"><img src="http://static.nurisoop.co.kr/images/m/main_sbn08.png" alt="쿠폰등록"></a></li>
+
+					<!--li><a href="<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+	<h4>A PHP Error was encountered</h4>
+
+	<p>Severity: Notice</p>
+	<p>Message:  Undefined index:  M_MTL</p>
+	<p>Filename: main/main.php</p>
+	<p>Line Number: 198</p>
+
+	</div>" target="<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+	<h4>A PHP Error was encountered</h4>
+
+	<p>Severity: Notice</p>
+	<p>Message:  Undefined index:  M_MTL</p>
+	<p>Filename: main/main.php</p>
+	<p>Line Number: 198</p>
+
+	</div>"><img src="<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+	<h4>A PHP Error was encountered</h4>
+
+	<p>Severity: Notice</p>
+	<p>Message:  Undefined index:  M_MTL</p>
+	<p>Filename: main/main.php</p>
+	<p>Line Number: 198</p>
+
+	</div>" alt="<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+	<h4>A PHP Error was encountered</h4>
+
+	<p>Severity: Notice</p>
+	<p>Message:  Undefined index:  M_MTL</p>
+	<p>Filename: main/main.php</p>
+	<p>Line Number: 198</p>
+
+	</div>" /></a></li>
+					<li><a href="<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+	<h4>A PHP Error was encountered</h4>
+
+	<p>Severity: Notice</p>
+	<p>Message:  Undefined index:  M_MTR</p>
+	<p>Filename: main/main.php</p>
+	<p>Line Number: 199</p>
+
+	</div>" target="<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+	<h4>A PHP Error was encountered</h4>
+
+	<p>Severity: Notice</p>
+	<p>Message:  Undefined index:  M_MTR</p>
+	<p>Filename: main/main.php</p>
+	<p>Line Number: 199</p>
+
+	</div>"><img src="<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+	<h4>A PHP Error was encountered</h4>
+
+	<p>Severity: Notice</p>
+	<p>Message:  Undefined index:  M_MTR</p>
+	<p>Filename: main/main.php</p>
+	<p>Line Number: 199</p>
+
+	</div>" alt="<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+	<h4>A PHP Error was encountered</h4>
+
+	<p>Severity: Notice</p>
+	<p>Message:  Undefined index:  M_MTR</p>
+	<p>Filename: main/main.php</p>
+	<p>Line Number: 199</p>
+
+	</div>" /></a></li-->
+				</ul>
+			</div>
+		</div>
+		<!-- // banner -->
+
+		<div id="gnbWrap2">
+			<nav class="gnbUIO">
+				<ul>
+					<li class="type3 on"><a href="javascript:viewGoodsInfoTab(0, 0, 9);"><span>인기순</span></a></li>
+					<li class="type3"><a href="javascript:viewGoodsInfoTab(1, 0, 9);"><span>피부타입별</span></a></li>
+					<li class="type3"><a href="javascript:viewGoodsInfoTab(2, 0, 9);"><span> 기능별</span></a></li>
+					<li class="type3"><a href="javascript:viewGoodsInfoTab(3, 0, 9);"><span>전체상품</span></a></li>
+				</ul>
+			</nav>
+		</div>  
+
+		<div id="gnbWrap3" style="display: none;">        
+			<nav class="gnbUIO2">
+				<ul>
+				<li class="type4 on"><a href="javascript:viewGoodsInfoTab(1, 0, 9);"><span>지성/트럽성</span></a></li>
+				<li class="type4"><a href="javascript:viewGoodsInfoTab(1, 1, 9);"><span>건성</span></a></li>
+				<li class="type4"><a href="javascript:viewGoodsInfoTab(1, 2, 9);"><span>복합성</span></a></li>
+				<li class=""><a href="javascript:viewGoodsInfoTab(1, 3, 9);"><span>민감성</span></a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div id="gnbWrap4" style="display: none;">        
+			<nav class="gnbUIO3">
+				<ul>
+				<li class="type5 on"><a href="javascript:viewGoodsInfoTab(2, 0, 9);"><span>스킨/로션</span></a></li>
+				<li class="type5"><a href="javascript:viewGoodsInfoTab(2, 1, 9);"><span>크림/앰플/오일</span></a></li>
+				<li class="type5"><a href="javascript:viewGoodsInfoTab(2, 2, 9);"><span>썬크림/비비크림</span></a></li>
+				<li class="type5"><a href="javascript:viewGoodsInfoTab(2, 3, 9);"><span>클렌징/팩/각질제거</span></a></li>
+				<li class=""><a href="javascript:viewGoodsInfoTab(2, 4, 9);"><span>세트상품</span></a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- // gnbWrap2 -->
+
+		<div id="mainList"><ul>
+									<li>
+										<div class="goods_info4">
+												<div onclick="location.href='/shop/view/8'" style="width:100%; height:100%; -webkit-tap-highlight-color:transparent;">
+												<span class="thumb">
+													<img src="http://file.nurisoop.co.kr/goods/201504/1428484215phpZHZZCB.jpg" width="260" height="260" alt="포레스트 녹삼초 폼클렌저 [exp: 2019-02-21]">
+												</span>
+												<span class="corp">
+													천연유래 클렌징성분</span>
+												<span class="goods">
+													포레스트 녹삼초 폼클렌저 [exp: 2019-02-21]</span>
+												<span style="position:absolute; top:160px; left:280px;">
+													<img src="http://static.nurisoop.co.kr/images/icon/all.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/mogak.jpg" style="margin-right:10px;"></span>
+												<span class="price">
+													<del>10,000원</del> <span class="value">8,500원</span>
+
+
+												</span>
+												</div>
+											<a href="javascript:alert('이 상품은 임시품절 상품입니다.');"><span class="cart"><img src="http://static.nurisoop.co.kr/images/m/btn_cart.png" alt="장바구니"></span></a>
+										</div>
+									</li>
+
+									<li>
+										<div class="goods_info4">
+												<div onclick="location.href='/shop/view/13'" style="width:100%; height:100%; -webkit-tap-highlight-color:transparent;">
+												<span class="thumb">
+													<img src="http://file.nurisoop.co.kr/goods/201802/1519799077phpq4kwSl.jpg" width="260" height="260" alt="누리촉촉워터밸런스2종세트(스킨+로션)">
+												</span>
+												<span class="corp">
+													피지조절 &amp; 피부에 충분한 수분을 공급하는 누리촉촉 2종세트!</span>
+												<span class="goods">
+													누리촉촉워터밸런스2종세트(스킨+로션)</span>
+												<span style="position:absolute; top:160px; left:280px;">
+													<img src="http://static.nurisoop.co.kr/images/icon/ji.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/min.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/subo.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/suji.jpg" style="margin-right:10px;"></span>
+												<span class="price">
+													<del>24,000원</del> <span class="value">12,500원</span>
+
+
+												</span>
+												</div>
+											<a href="javascript:alert('이 상품은 임시품절 상품입니다.');"><span class="cart"><img src="http://static.nurisoop.co.kr/images/m/btn_cart.png" alt="장바구니"></span></a>
+										</div>
+									</li>
+
+									<li>
+										<div class="goods_info4">
+												<div onclick="location.href='/shop/view/11'" style="width:100%; height:100%; -webkit-tap-highlight-color:transparent;">
+												<span class="thumb">
+													<img src="http://file.nurisoop.co.kr/goods/201504/1428484081php27TIRM.jpg" width="260" height="260" alt="론리비즈 프로폴리스 85 앰플">
+												</span>
+												<span class="corp">
+													프로폴리스85% 고함량 저자극 앰플</span>
+												<span class="goods">
+													론리비즈 프로폴리스 85 앰플</span>
+												<span style="position:absolute; top:160px; left:280px;">
+													<img src="http://static.nurisoop.co.kr/images/icon/all.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/bok.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/ji.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/min.jpg" style="margin-right:10px;"></span>
+												<span class="price">
+													<del>21,000원</del> <span class="value">19,900원</span>
+
+													<span><b style="border-radius:80px; padding:1px 4px; border :2px solid yellow; background-color:red; color:white; font-family:nanumgothic;"> 1+1게릴라</b></span>
+												</span>
+												</div>
+											<a href="javascript:alert('이 상품은 임시품절 상품입니다.');"><span class="cart"><img src="http://static.nurisoop.co.kr/images/m/btn_cart.png" alt="장바구니"></span></a>
+										</div>
+									</li>
+
+									<li>
+										<div class="goods_info4">
+												<div onclick="location.href='/shop/view/4'" style="width:100%; height:100%; -webkit-tap-highlight-color:transparent;">
+												<span class="thumb">
+													<img src="http://file.nurisoop.co.kr/goods/201802/1519783239phpBZt4S2.jpg" width="260" height="260" alt="누리촉촉 워터밸런스 스킨">
+												</span>
+												<span class="corp">
+													히알루론산 함유 오일프리 보습스킨</span>
+												<span class="goods">
+													누리촉촉 워터밸런스 스킨</span>
+												<span style="position:absolute; top:160px; left:280px;">
+													<img src="http://static.nurisoop.co.kr/images/icon/ji.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/min.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/subo.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/suji.jpg" style="margin-right:10px;"></span>
+												<span class="price">
+													<del>12,000원</del> <span class="value">7,500원</span>
+
+
+												</span>
+												</div>
+											<a href="javascript:alert('이 상품은 임시품절 상품입니다.');"><span class="cart"><img src="http://static.nurisoop.co.kr/images/m/btn_cart.png" alt="장바구니"></span></a>
+										</div>
+									</li>
+
+									<li>
+										<div class="goods_info4">
+												<div onclick="location.href='/shop/view/7'" style="width:100%; height:100%; -webkit-tap-highlight-color:transparent;">
+												<span class="thumb">
+													<img src="http://file.nurisoop.co.kr/goods/201504/1428484281php6SN67O.jpg" width="260" height="260" alt="포레스트 리페어 크림">
+												</span>
+												<span class="corp">
+													EGF, 펩타이드성분 no실리콘 고영양 재생크림</span>
+												<span class="goods">
+													포레스트 리페어 크림</span>
+												<span style="position:absolute; top:160px; left:280px;">
+													<img src="http://static.nurisoop.co.kr/images/icon/bok.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/gun.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/ja.jpg" style="margin-right:10px;"></span>
+												<span class="price">
+													<del>25,000원</del> <span class="value">21,000원</span>
+
+
+												</span>
+												</div>
+											<a href="javascript:alert('이 상품은 임시품절 상품입니다.');"><span class="cart"><img src="http://static.nurisoop.co.kr/images/m/btn_cart.png" alt="장바구니"></span></a>
+										</div>
+									</li>
+
+									<li>
+										<div class="goods_info4">
+												<div onclick="location.href='/shop/view/85'" style="width:100%; height:100%; -webkit-tap-highlight-color:transparent;">
+												<span class="thumb">
+													<img src="http://file.nurisoop.co.kr/goods/201701/1484817719php8Ar0nH.jpg" width="260" height="260" alt="누리촉촉 워터밸런스 마스크팩 [exp: 2018-11-15]">
+												</span>
+												<span class="corp">
+													즉각적인 수분공급! 피부진정!</span>
+												<span class="goods">
+													누리촉촉 워터밸런스 마스크팩 [exp: 2018-11-15]</span>
+												<span style="position:absolute; top:160px; left:280px;">
+													</span>
+												<span class="price">
+													<del>1,500원</del> <span class="value">1,000원</span>
+
+
+												</span>
+												</div>
+											<a href="javascript:alert('이 상품은 임시품절 상품입니다.');"><span class="cart"><img src="http://static.nurisoop.co.kr/images/m/btn_cart.png" alt="장바구니"></span></a>
+										</div>
+									</li>
+
+									<li>
+										<div class="goods_info4">
+												<div onclick="location.href='/shop/view/86'" style="width:100%; height:100%; -webkit-tap-highlight-color:transparent;">
+												<span class="thumb">
+													<img src="http://file.nurisoop.co.kr/goods/201701/1484817416phpF1yNm3.jpg" width="260" height="260" alt="론리비즈 프로폴리스 마스크팩 [exp: 2018-11-19]">
+												</span>
+												<span class="corp">
+													프로폴리스로 영양공급! 피부진정!</span>
+												<span class="goods">
+													론리비즈 프로폴리스 마스크팩 [exp: 2018-11-19]</span>
+												<span style="position:absolute; top:160px; left:280px;">
+													</span>
+												<span class="price">
+													<del>1,500원</del> <span class="value">1,000원</span>
+
+
+												</span>
+												</div>
+											<a href="javascript:alert('이 상품은 임시품절 상품입니다.');"><span class="cart"><img src="http://static.nurisoop.co.kr/images/m/btn_cart.png" alt="장바구니"></span></a>
+										</div>
+									</li>
+
+									<li>
+										<div class="goods_info4">
+												<div onclick="location.href='/shop/view/27'" style="width:100%; height:100%; -webkit-tap-highlight-color:transparent;">
+												<span class="thumb">
+													<img src="http://static.nurisoop.co.kr/images/goods/chocchoc_cream_70/200.jpg" width="260" height="260" alt="누리촉촉 딥 수딩크림 [exp: 2019-02-22]">
+												</span>
+												<span class="corp">
+													누리숲 인기 상품! 용량 20ml UP, 튜브형으로 깔끔하게</span>
+												<span class="goods">
+													누리촉촉 딥 수딩크림 [exp: 2019-02-22]</span>
+												<span style="position:absolute; top:160px; left:280px;">
+													<img src="http://static.nurisoop.co.kr/images/icon/all.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/bok.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/ji.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/subo.jpg" style="margin-right:10px;"></span>
+												<span class="price">
+													<del>20,000원</del> <span class="value">9,900원</span>
+
+
+												</span>
+												</div>
+											<a href="javascript:alert('이 상품은 임시품절 상품입니다.');"><span class="cart"><img src="http://static.nurisoop.co.kr/images/m/btn_cart.png" alt="장바구니"></span></a>
+										</div>
+									</li>
+
+									<li>
+										<div class="goods_info4">
+												<div onclick="location.href='/shop/view/37'" style="width:100%; height:100%; -webkit-tap-highlight-color:transparent;">
+												<span class="thumb">
+													<img src="http://static.nurisoop.co.kr/images/goods/suncream/200.jpg" width="260" height="260" alt="누리촉촉 병풀 썬크림">
+												</span>
+												<span class="corp">
+													저자극 무기자외선 차단제! 정제수대신 병풀추출물 함유!</span>
+												<span class="goods">
+													누리촉촉 병풀 썬크림</span>
+												<span style="position:absolute; top:160px; left:280px;">
+													<img src="http://static.nurisoop.co.kr/images/icon/gun.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/min.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/subo.jpg" style="margin-right:10px;"><img src="http://static.nurisoop.co.kr/images/icon/sugun.jpg" style="margin-right:10px;"></span>
+												<span class="price">
+													<del>28,000원</del> <span class="value">24,900원</span>
+
+
+												</span>
+												</div>
+											<a href="javascript:alert('이 상품은 임시품절 상품입니다.');"><span class="cart"><img src="http://static.nurisoop.co.kr/images/m/btn_cart.png" alt="장바구니"></span></a>
+										</div>
+									</li>
+								</ul></div>
+		<!--// list -->
+
+
+		<div id="best">
+			<div class="tit"><span style="color:#5d8130">베스트</span> <span style="color:#694932">상품</span> <span style="color:#b29b84; font-size:22px">BEST PRODUCT</span></div>
+			<ul>
+								<li class="info">
+						<span class="number"><img src="http://static.nurisoop.co.kr/images/m/best01_bg.png"></span>
+						<a href="/shop/view/4">
+						<span class="thumb">
+							<img src="http://file.nurisoop.co.kr/goods/201802/1519783239phpBZt4S2.jpg" width="260" height="260" alt="누리촉촉 워터밸런스 스킨">
+						</span>
+						<p class="goods">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													</p><p class="review">사용후기(<span>331</span>)</p>
+							<p class="name" style="height:50px;">누리촉촉 워터밸런스 스킨</p>
+							<p class="price">7,500원</p>
+						<p></p>
+						</a><p class="wishcart"><a href="/shop/view/4">
+							<span class="wish"></span></a><a href="javascript:addWish('4');"><img src="http://static.nurisoop.co.kr/images/m/icon_wish.png"></a>
+							<span class="cart"><a href="javascript:addCart('4');"><img src="http://static.nurisoop.co.kr/images/m/icon_cart.png"></a></span>
+						</p>
+					</li>
+									<li class="info">
+						<span class="number"><img src="http://static.nurisoop.co.kr/images/m/best02_bg.png"></span>
+						<a href="/shop/view/5">
+						<span class="thumb">
+							<img src="http://file.nurisoop.co.kr/goods/201510/1444286899phpZuZvKP.jpg" width="260" height="260" alt="누리촉촉 워터밸런스 로션">
+						</span>
+						<p class="goods">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													</p><p class="review">사용후기(<span>147</span>)</p>
+							<p class="name" style="height:50px;">누리촉촉 워터밸런스 로션</p>
+							<p class="price">5,900원</p>
+						<p></p>
+						</a><p class="wishcart"><a href="/shop/view/5">
+							<span class="wish"></span></a><a href="javascript:addWish('5');"><img src="http://static.nurisoop.co.kr/images/m/icon_wish.png"></a>
+							<span class="cart"><a href="javascript:addCart('5');"><img src="http://static.nurisoop.co.kr/images/m/icon_cart.png"></a></span>
+						</p>
+					</li>
+									<li class="info">
+						<span class="number"><img src="http://static.nurisoop.co.kr/images/m/best03_bg.png"></span>
+						<a href="/shop/view/8">
+						<span class="thumb">
+							<img src="http://file.nurisoop.co.kr/goods/201504/1428484215phpZHZZCB.jpg" width="260" height="260" alt="포레스트 녹삼초 폼클렌저 [exp: 2019-02-21]">
+						</span>
+						<p class="goods">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													</p><p class="review">사용후기(<span>431</span>)</p>
+							<p class="name" style="height:50px;">포레스트 녹삼초 폼클렌저 [exp: 2019-02-21]</p>
+							<p class="price">8,500원</p>
+						<p></p>
+						</a><p class="wishcart"><a href="/shop/view/8">
+							<span class="wish"></span></a><a href="javascript:addWish('8');"><img src="http://static.nurisoop.co.kr/images/m/icon_wish.png"></a>
+							<span class="cart"><a href="javascript:addCart('8');"><img src="http://static.nurisoop.co.kr/images/m/icon_cart.png"></a></span>
+						</p>
+					</li>
+									<li class="info">
+						<span class="number"><img src="http://static.nurisoop.co.kr/images/m/best04_bg.png"></span>
+						<a href="/shop/view/7">
+						<span class="thumb">
+							<img src="http://file.nurisoop.co.kr/goods/201504/1428484281php6SN67O.jpg" width="260" height="260" alt="포레스트 리페어 크림">
+						</span>
+						<p class="goods">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													<img src="http://static.nurisoop.co.kr/images/m/icon_star.png">
+													</p><p class="review">사용후기(<span>417</span>)</p>
+							<p class="name" style="height:50px;">포레스트 리페어 크림</p>
+							<p class="price">21,000원</p>
+						<p></p>
+						</a><p class="wishcart"><a href="/shop/view/7">
+							<span class="wish"></span></a><a href="javascript:addWish('7');"><img src="http://static.nurisoop.co.kr/images/m/icon_wish.png"></a>
+							<span class="cart"><a href="javascript:addCart('7');"><img src="http://static.nurisoop.co.kr/images/m/icon_cart.png"></a></span>
+						</p>
+					</li>
+							</ul>
+		</div>
+		<!--// best -->
+
+		<div id="new">
+			<div class="tit"><span style="color:#5d8130">누리숲</span> <span style="color:#694932">신상품</span> <span style="color:#b29b84; font-size:22px">NEW PRODUCT</span></div>
+			<ul>
+								<li class="info">
+						<a href="/shop/view/136">
+						<span class="thumb">
+							<img src="http://file.nurisoop.co.kr/goods/201706/1497574351php6frOvf.jpg" width="260" height="260" alt="디스이즈 올리브 딥 클렌징오일">
+						</span>
+						<p class="goods">
+							</p><p class="name" style="height:60px;">디스이즈 올리브 딥 클렌징오일</p>
+							<p class="price">19,900원</p>
+						<p></p>
+						</a><p class="wishcart"><a href="/shop/view/136">
+							<span class="wish"></span></a><a href="javascript:addWish('136');"><img src="http://static.nurisoop.co.kr/images/m/icon_wish.png"></a>
+							<span class="cart"><a href="javascript:addCart('136');"><img src="http://static.nurisoop.co.kr/images/m/icon_cart.png"></a></span>
+						</p>
+					</li>
+									<li class="info">
+						<a href="/shop/view/137">
+						<span class="thumb">
+							<img src="http://file.nurisoop.co.kr/goods/201707/1499991665phpXEGHL8.jpg" width="260" height="260" alt="투명피부 10일 10팩세트_갈락토마스크팩*10 [1+1/exp:2018-11-19]">
+						</span>
+						<p class="goods">
+							</p><p class="name" style="height:60px;">투명피부 10일 10팩세트_갈락토마스크팩*10 [1+1/exp:2018-11-19]</p>
+							<p class="price">19,900원</p>
+						<p></p>
+						</a><p class="wishcart"><a href="/shop/view/137">
+							<span class="wish"></span></a><a href="javascript:addWish('137');"><img src="http://static.nurisoop.co.kr/images/m/icon_wish.png"></a>
+							<span class="cart"><a href="javascript:addCart('137');"><img src="http://static.nurisoop.co.kr/images/m/icon_cart.png"></a></span>
+						</p>
+					</li>
+									<li class="info">
+						<a href="/shop/view/151">
+						<span class="thumb">
+							<img src="http://file.nurisoop.co.kr/goods/201805/1526628344phpv3HGZX.jpg" width="260" height="260" alt="쫀쫀피부 10일 10팩세트_론리비즈마스크팩*10 [1+1/exp:2018-11-19]">
+						</span>
+						<p class="goods">
+							</p><p class="name" style="height:60px;">쫀쫀피부 10일 10팩세트_론리비즈마스크팩*10 [1+1/exp:2018-11-19]</p>
+							<p class="price">9,900원</p>
+						<p></p>
+						</a><p class="wishcart"><a href="/shop/view/151">
+							<span class="wish"></span></a><a href="javascript:addWish('151');"><img src="http://static.nurisoop.co.kr/images/m/icon_wish.png"></a>
+							<span class="cart"><a href="javascript:addCart('151');"><img src="http://static.nurisoop.co.kr/images/m/icon_cart.png"></a></span>
+						</p>
+					</li>
+									<li class="info">
+						<a href="/shop/view/152">
+						<span class="thumb">
+							<img src="http://file.nurisoop.co.kr/goods/201805/1526628308phpNMdHjI.jpg" width="260" height="260" alt="물찬피부 10일 10팩세트_워터밸런스마스크팩*10 [1+1/exp:2018-11-15]">
+						</span>
+						<p class="goods">
+							</p><p class="name" style="height:60px;">물찬피부 10일 10팩세트_워터밸런스마스크팩*10 [1+1/exp:2018-11-15]</p>
+							<p class="price">9,900원</p>
+						<p></p>
+						</a><p class="wishcart"><a href="/shop/view/152">
+							<span class="wish"></span></a><a href="javascript:addWish('152');"><img src="http://static.nurisoop.co.kr/images/m/icon_wish.png"></a>
+							<span class="cart"><a href="javascript:addCart('152');"><img src="http://static.nurisoop.co.kr/images/m/icon_cart.png"></a></span>
+						</p>
+					</li>
+							</ul>
+		</div>
+		<!--// new -->
+
+
+
+	<!--//  Vizury-vizLayer Tag Start  //-->
+	<script type="text/javascript">
+	//[메인(홈) 페이지에 설치될 vizLayer Tag]
+	var vizLayer={
+		type: 'home_page'
+	};
+	</script>
+	<!--//  Vizury-vizLayer Tag End  //-->
+
+
+	<link rel="stylesheet" href="http://static.nurisoop.co.kr/css/layout_m_20170316.css">
+	<script>
+	function proposer_code_open5() {
+		$('#fr_event_m_pop1').show();
+		$('#fr_event_m_pop1 .fr_event_popCode').show();
+		$.cookie('fr_proposer','on',{expires:1,path:'/'});
+	}
+
+	function proposer_close5() {
+		/*$('#fr_event_m_pop1').css('display','none');
+		$('#fr_event_m_pop1 .event_row').css('display','none');
+		$.cookie('fr_proposer','off',{expires:1,path:'/'});*/
+
+		$('#fr_event_m_pop1').css('display','none');
+		$('#fr_event_m_pop1 .fr_event_popCode').css('display','none');
+		$.cookie('fr_proposer','off',{expires:1,path:'/'});
+	}
+
+	function proposer_chk5() {
+		var code = $('input[name="proposer_code5"]').val();
+
+		if(code == ""){
+			alert('추천인 코드를 입력해주세요.');
+			$('input[name="proposer_code5"]').focus();
+			return;
+		} else {
+			$('form[name="proposer_form5"]').attr('action', '/event/auth2');
+			$('form[name="proposer_form5"]').submit();
+		}
+	}
+
+	function proposer_chk5_new() {
+		var code = $('input[name="proposer_code5"]').val();
+
+		if(code == ""){
+			alert('추천인 코드를 입력해주세요.');
+			$('input[name="proposer_code5"]').focus();
+			return;
+		} else {
+			$('form[name="proposer_form5"]').attr('action', '/event/auth2_new');
+			$('form[name="proposer_form5"]').submit();
+		}
+	}
+	</script>
+
+		<!--추천인코드 입력창-->
+		<!--div id="fr_event_m_pop1" class="fr_box" style="z-index:1000001; display:none" >
+			<div class="event_row">
+				<div class="fr_event_pop">
+					<div class="fr_event_popup03">
+						<form method="post" name="proposer_form5">
+							<!--
+							<p><i class="fa fa-times fa-2x" aria-hidden="true"></i></p>
+							-->
+							<!--div class="fr_popCode03">
+								<label><input type="text" value="" name="proposer_code5" style="text-align:center;" placeholder="추천인코드를 입력해주세요" /></label>
+							</div>
+							<div class="fr_popCodeBtn">
+								<input type="button" onclick="javascript: proposer_close5();" class="nor_btn" />
+								<input type="button" onclick="javascript: proposer_chk5_new();" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>-->
+
+		<div id="fr_event_m_pop1" class="fr_box" style="z-index:1000001; display:none">
+				<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+	<h4>A PHP Error was encountered</h4>
+
+	<p>Severity: Notice</p>
+	<p>Message:  Undefined index:  user</p>
+	<p>Filename: main/layer_app_new.php</p>
+	<p>Line Number: 105</p>
+
+	</div>	
+
+				<div class="fr_event_popCode fr_event_popCode_woman">
+						<p style="font-size:27px;text-align:center;padding-top:70px;">님 추천인코드를 입력해주시면<br><b><span style="color:#c32e30;">바로사용가능</span>한 <span style="color:#c32e30;">쿠폰 3종 세트가 발급</span>됩니다!</b></p>
+					<div class="event_popCodeBox">
+						<form method="post" name="proposer_form5">
+							<label class="txt_wrap">
+								<input type="text" value="" name="proposer_code5" style="text-align:center;" placeholder="추천인코드를 입력해주세요">
+							</label>
+							<div class="btn_wrap">
+								<input type="button" class="passBtn" onclick="javascript: proposer_close5();">
+								<input type="button" onclick="javascript: proposer_chk5_new();">
+							</div>
+						</form>
+
+					</div>
+
+				</div>
+
+		</div>
+
+
+		<div id="icon">
+			<ul>
+				<li><a href="/comp/brand"><img src="http://static.nurisoop.co.kr/images/m/icon_brand.png"></a></li>
+				<li><a href="/community/review"><img src="http://static.nurisoop.co.kr/images/m/icon_review.png"></a></li>
+				<li><a href="/event/attendance"><img src="http://static.nurisoop.co.kr/images/m/icon_check.png"></a></li>
+				<li><a href="/customer/sample"><img src="http://static.nurisoop.co.kr/images/m/icon_free.png"></a></li>
+				<li><a href="/mypage/orderList"><img src="http://static.nurisoop.co.kr/images/m/icon_delievery.png"></a></li>
+				<li><a href="/customer/qna"><img src="http://static.nurisoop.co.kr/images/m/icon_faq.png"></a></li>
+				<li><a href="/community/qna"><img src="http://static.nurisoop.co.kr/images/m/icon_qna.png"></a></li>
+				<li><a href="/event"><img src="http://static.nurisoop.co.kr/images/m/icon_notice.png"></a></li>
+			</ul>
+		</div>
+		<!--// icon -->	<!-- footer -->
+		<link rel="stylesheet" href="http://static.nurisoop.co.kr/css/footer_m.css">
+		<div id="footer_renew">
+			<div class="f_top">
+				<ul class="f_menu">				
+									<li><a href="/user2/login">로그인</a></li>
+					<!--
+					<li><a href="/user2/join01">회원가입</a></li>
+					-->
+					<li><a href="/customer/news">누리숲 뉴스</a></li>
+									<li><a href="/customer">고객센터</a></li>
+					<li><a href="http://www.nurisoop.co.kr/?pc=Y">PC버전</a></li>
+				</ul>
+			</div>
+			<div class="f_btm">
+				<ul class="cs_center">
+					<li>
+						<a href="tel:1688-6093" class="call">
+							고객상담<br>
+							1688-6093					</a>
+					</li>
+					<li>
+						<a href="mailto:nurisoop@ebiznetworks.co.kr" class="mail">
+							문의메일<br>
+							nurisoop@ebiznetworks.co.kr					</a>
+					</li>
+				</ul>
+				<address>
+					<strong>(주)이비즈네트웍스</strong><br>
+					<span>
+						대표이사 : 박기범<br>
+						주소 : 서울특별시 강남구 테헤란로 82길 15, 14층 (대치동,디아이타워)<br>
+						FAX : 070-8277-5511 | 개인정보관리자 : 박준수<br>
+						사업자등록번호 : 220-87-30865<br>
+						통신판매업 신고번호 : 강남-11501호<br>
+						의료기기판매업 영업신고번호 : 제 4730호				</span>
+				</address>
+				<p class="copy">Copyright©EbizNetworks. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--180917 팝업영역-->
+	<!-- 190123 설연휴 배송안내 팝업 -->
+	<!--<div class="pop-wrap newYear-tg-wrap">
+		<div class="back-bg"></div>
+		<div class="pop-area delDelay-tg">
+			<div class="pop-contents">
+				<a href="http://www.nurisoop.co.kr/customer/noticeView/92" target="_blank" class="pop-img"><img src="http://static.nurisoop.co.kr/images/pop/newYear_tg_m.png" alt="추석연휴배송안내"></a>
+				<a href="javascript:;" onclick="popCls('.pop-wrap')" class="day-clsBtn">오늘 안 보기 X</a>
+				<a href="javascript:;" onclick="popCls('.pop-wrap')" class="clsBtn"><span class="hidden">닫기</span></a>
+			</div>
+		</div>
+		<script>function popCls(el) {$(el).hide();}</script>
+	</div>-->
+	
+	<!-- 190430 어린이날 대체공휴일 배송안내 팝업 -->
+	<div class="pop-wrap holidayMay-tg-wrap">
+		<div class="back-bg"></div>
+		<div class="pop-area delDelay-tg">
+			<div class="pop-contents">
+				<a href="http://m.nurisoop.co.kr/customer/noticeView/87" target="_blank" class="pop-img"><img src="http://static.nurisoop.co.kr/images/pop/holidayMay19_tg_m.png" alt="누리숲 대체공휴일 배송안내"></a>
+				<a href="javascript:;" onclick="popCls('.pop-wrap')" class="day-clsBtn">오늘 안 보기 X</a>
+				<a href="javascript:;" onclick="popCls('.pop-wrap')" class="clsBtn"><span class="hidden">닫기</span></a>
+			</div>
+		</div>
+		<script>function popCls(el) {$(el).hide();}</script>
+	</div>
+	<!--//-->
+	<!--//-->
+	
+</body>
+</html>
