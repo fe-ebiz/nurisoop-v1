@@ -1282,3 +1282,8 @@ font-size:28px;color:#4a4a4a;text-align:center;line-height:1.5}
 .pop-wrap.holidayMay-tg-wrap {width: 150px; top: 498px; left: 50%; margin-left: 120px;}
 .pop-wrap.holidayMay-tg-wrap.app {top: 498px;}
 .pop-wrap.holidayMay-tg-wrap .delDelay-tg .pop-contents .clsBtn {background: #1c1f20;}
+
+/* 190826 추석연휴 배송안내 팝업 */
+.pop-wrap.thanksgiving-tg-wrap {width: 150px; top: 498px; left: 50%; margin-left: 120px;}
+.pop-wrap.thanksgiving-tg-wrap.app {top: 498px;}
+.pop-wrap.thanksgiving-tg-wrap .delDelay-tg .pop-contents .clsBtn {background: #ff8657;}

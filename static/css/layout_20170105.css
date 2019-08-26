@@ -1634,5 +1634,11 @@ p.closed{float:right;width:20px;height:30px;font-size:25px;color:#fff;font-weigh
 .holidayMay-tg-wrap .delDelay-tg .pop-contents .bottom .flt-1, .holidayMay-tg-wrap .delDelay-tg .pop-contents .bottom .clsBtn {color: #0e0f10;}
 .holidayMay-tg-wrap .delDelay-tg .pop-contents .bottom .flt-1 input[type=checkbox] + label:before { border-radius: 1px; border: 1px solid #d1d1d1;}
 
+/* 190826 추석연휴 배송안내 팝업 */
+.thanksgiving-tg-wrap .delDelay-tg {top: 210px; left: 60px; margin-left: 0px; background: #ffdb56;}
+.thanksgiving-tg-wrap .delDelay-tg .pop-contents .bottom {padding: 9px 20px 10px 20px; font-size: 13px; background: url(http://static.nurisoop.co.kr/images/pop/thanksgiving2019_tg_btn.jpg) no-repeat center;}
+.thanksgiving-tg-wrap .delDelay-tg .pop-contents .bottom .flt-1, .holidayMay-tg-wrap .delDelay-tg .pop-contents .bottom .clsBtn {font-weight: bold; color: #292929;}
+.thanksgiving-tg-wrap .delDelay-tg .pop-contents .bottom .flt-1 input[type=checkbox] + label:before { border-radius: 1px; border: 1px solid #d1d1d1;}
+
 
 
