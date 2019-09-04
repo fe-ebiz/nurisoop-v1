@@ -1206,6 +1206,19 @@ font-size:28px;color:#4a4a4a;text-align:center;line-height:1.5}
 .evt-xmas2018 .evt-info-area .evt-info-box .evt-info-txt .evt-info-list {font-size: 23px; line-height: 30px;}
 .evt-xmas2018 .evt-info-area .evt-info-box .evt-info-txt .evt-info-list li {margin-top: 10px; padding-left: 14px; text-indent: -15px;}
 .evt-xmas2018 .evt-info-area .evt-info-box .evt-info-txt .evt-info-list li:first-child {margin-top: 0;}
+/* 190904 뉴 디자인 추가 */ 
+.evt-xmas2018 .evt-info-area .evt-list-box {margin: 0 auto; padding: 0 20px; text-align: left;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-tit {width: 192px; height: 56px; font-size: 30px; font-weight: bold; text-align: center; line-height: 56px; border: 1px solid #fff; border-radius: 33px;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list {position: relative; padding-top: 10px;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list > li {margin-top: 26px; font-size: 23px; font-weight: bold;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .sub-info-list {position: relative; margin-top: 9px; padding-left: 12px;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .sub-info-list li {position: relative; box-sizing: border-box; font-size: 20px; font-weight: 300; letter-spacing: -0.7px;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .sub-info-list li em {font-weight: bold;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .t-line {}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .t-line li {padding-left: 14px;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .t-line li:before {content: ''; position: absolute; top: 13px; left: 0; width: 6px; height: 1px; background: #fff;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-sm-txt {padding: 35px 55px 0 0; font-size: 16px; font-weight: 300; text-align: right; color: #7d7d7d;}
+
 /* 20190221_누리숲 개강 대작전 이벤트 */
 .evt-xmas2018.evt-semester {letter-spacing: -1px; background: #b9dbfd;}
 /* tab */
@@ -1236,6 +1249,27 @@ font-size:28px;color:#4a4a4a;text-align:center;line-height:1.5}
 /* info box */ 
 .evt-xmas2018.evt-semester .evt-info-area .evt-info-box .evt-info-txt {padding-top: 0;}
 
+/* 20190904_추석 이벤트 - 버튼 없음 */
+.evt-xmas2018.evt-tnkgvg {}
+.evt-xmas2018.evt-tnkgvg .evt-sec {padding: 0;}
+.evt-xmas2018.evt-tnkgvg .evt-sec img {max-width: 680px;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box {margin: 0 auto; padding: 77px 0 80px; text-align: center; background: #fee1cf;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box.bg-grn {background: #d8f1df;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box.bg-sky {background: #e5f3f5;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .list-tit {padding: 0;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list {display: inline-block; margin: 0 -10px; padding-top: 30px;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li {width: 33.3%; margin-top: 12px; margin-left: 0; padding: 0 6px;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area {height: 330px; background: #fff;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box {padding: 10px 0 25px;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-tit {padding-top: 15px; font-weight: bold; color: #ff4620;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-tit span {}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-sale {top: 25px; left: 20px; vertical-align: middle; background: #ff4620;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-sale span {font-size: 14px; vertical-align: baseline;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-price {padding-top: 3px; line-height: 1;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-price span {padding-top: 5px; font-weight: 300; vertical-align: top; color: #757575;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-price span:before {margin-top: 2px; background: #757575;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-price em {margin-left: 3px; font-weight: bolder; vertical-align: middle; color: #011748;}
+.evt-xmas2018.evt-tnkgvg .evt-info-area {padding: 80px 0 73px; background: #393939;}
 
 
 

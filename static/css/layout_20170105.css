@@ -1552,12 +1552,26 @@ p.closed{float:right;width:20px;height:30px;font-size:25px;color:#fff;font-weigh
 .evt-xmas2018 .evt-info-area .evt-info-box .evt-info-txt .evt-info-list {font-size: 23px; line-height: 30px;}
 .evt-xmas2018 .evt-info-area .evt-info-box .evt-info-txt .evt-info-list li {margin-top: 10px; padding-left: 14px; text-indent: -15px;}
 .evt-xmas2018 .evt-info-area .evt-info-box .evt-info-txt .evt-info-list li:first-child {margin-top: 0;}
+/* 190904 뉴 디자인 추가 */ 
+.evt-xmas2018 .evt-info-area .evt-list-box {width: 750px; margin: 0 auto; text-align: left;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-tit {width: 192px; height: 56px; font-size: 30px; font-weight: bold; text-align: center; line-height: 56px; border: 1px solid #fff; border-radius: 33px;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list {position: relative; padding-top: 10px;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list > li {margin-top: 26px; font-size: 21px; font-weight: bold;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .sub-info-list {position: relative; margin-top: 9px; padding-left: 12px;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .sub-info-list li {position: relative; box-sizing: border-box; font-size: 18px; font-weight: 400;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .sub-info-list li em {font-weight: bold;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .t-line {}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .t-line li {padding-left: 14px;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .t-line li:before {content: ''; position: absolute; top: 13px; left: 0; width: 6px; height: 1px; background: #fff;}
+.evt-xmas2018 .evt-info-area .evt-list-box .evt-sm-txt {padding: 55px 55px 0 0; font-size: 16px; font-weight: 300; text-align: right; color: #7d7d7d;}
 /* ie8 */
 .ie8 .evt-xmas2018 .evt-tab li a {}
 .ie8 .evt-xmas2018 .evt-sec .evt-list li.nth-1, .evt-xmas2018 .evt-sec .evt-list li.nth-4, .evt-xmas2018 .evt-sec .evt-list li.nth-7, .evt-xmas2018 .evt-sec .evt-list li.nth-10 {margin-left: 0;}
 .ie8 .evt-xmas2018 .evt-sec .evt-list .prd-area .prd-tit {font-size: 18px;}
 .ie8 .evt-xmas2018 .evt-sec .evt-list .prd-area .prd-tit span {font-size: 16px;}
 .ie8 .evt-xmas2018 .evt-info-area .evt-info-box .evt-info-txt .evt-info-list {font-size: 21px; line-height: 28px;}
+.ie8 .evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .sub-info-list li,
+.safari .evt-xmas2018 .evt-info-area .evt-list-box .evt-info-list .sub-info-list li {letter-spacing: -1.3px;}
 
 /* 20190221_누리숲 개강 대작전 이벤트 */
 .evt-xmas2018.evt-semester {letter-spacing: -1px; background: #b9dbfd;}
@@ -1590,6 +1604,30 @@ p.closed{float:right;width:20px;height:30px;font-size:25px;color:#fff;font-weigh
 /* info box */ 
 .evt-xmas2018.evt-semester .evt-info-area .evt-info-box .evt-info-tit {width: 25%;}
 .evt-xmas2018.evt-semester .evt-info-area .evt-info-box .evt-info-txt {padding-top: 0;}
+
+/* 20190904_추석 이벤트 - 버튼 없음 */
+.evt-xmas2018.evt-tnkgvg {}
+.evt-xmas2018.evt-tnkgvg .evt-sec {padding: 0;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box {margin: 0 auto; padding: 75px 0 80px; text-align: center; background: #fee1cf;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box.bg-grn {background: #d8f1df;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box.bg-sky {background: #e5f3f5;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .list-tit {padding: 0;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list {display: inline-block; width: 750px; margin: 0 -7px; padding-top: 27px;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li {width: 33.3%; margin-top: 14px; margin-left: 0; padding: 0 7px;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area {height: 372px; padding: 10px 0 23px; background: #fff;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box {}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-img {}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-tit {padding-top: 15px; font-size: 19px; font-weight: bold; line-height: 22px; color: #ff4620;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-tit span {font-size: 17px;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-sale {top: 29px; left: 20px; font-size: 24px; vertical-align: middle; background: #ff4620;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-sale span {font-size: 16px; vertical-align: baseline;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-price {padding-top: 6px; line-height: normal;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-price span {padding-top: 5px; font-weight: 300; vertical-align: top; color: #757575;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-price span:before {margin-top: 4px; background: #757575;}
+.evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-price em {margin-left: 5px; font-size: 28px; font-weight: bolder; vertical-align: middle; color: #011748;}
+.evt-xmas2018.evt-tnkgvg .evt-info-area {padding: 75px 0 67px; background: #393939;}
+
+ 
 
 
 
