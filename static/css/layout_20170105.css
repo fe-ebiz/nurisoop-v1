@@ -1605,6 +1605,7 @@ p.closed{float:right;width:20px;height:30px;font-size:25px;color:#fff;font-weigh
 .evt-xmas2018.evt-semester .evt-info-area .evt-info-box .evt-info-tit {width: 25%;}
 .evt-xmas2018.evt-semester .evt-info-area .evt-info-box .evt-info-txt {padding-top: 0;}
 
+/* 이벤트 스타일 노 탭 형식 기본 : .evt-xmas2018.evt-tnkgvg */
 /* 20190904_추석 이벤트 - 버튼 없음 */
 .evt-xmas2018.evt-tnkgvg {}
 .evt-xmas2018.evt-tnkgvg .evt-sec {padding: 0;}
@@ -1627,13 +1628,35 @@ p.closed{float:right;width:20px;height:30px;font-size:25px;color:#fff;font-weigh
 .evt-xmas2018.evt-tnkgvg .evt-sec .evt-list-box .evt-list li .prd-area .prd-box .prd-price em {margin-left: 5px; font-size: 28px; font-weight: bolder; vertical-align: middle; color: #011748;}
 .evt-xmas2018.evt-tnkgvg .evt-info-area {padding: 75px 0 67px; background: #393939;}
 
- 
-
-
-
-
-
-
+/* 크리스마스 스타일 추가 */
+.evt-xmas2018.christmas {}
+.evt-xmas2018.christmas .evt-sec .evt-list-box {
+    position: relative;
+}
+.evt-xmas2018.christmas .evt-sec .evt-list-box .upto {
+    z-index: 1;
+    position: absolute !important;
+    top: 0;
+    right: 0;
+}
+.evt-xmas2018.christmas .evt-sec .evt-list-box.bg-green {
+    background-color: #109a7b;
+}
+.evt-xmas2018.christmas .evt-sec .evt-list-box.bg-yellow {
+    background-color: #ffde7b;
+}
+.evt-xmas2018.christmas .evt-sec .evt-list-box.bg-gray {
+    background-color: #dde4e5;
+}
+.evt-xmas2018.christmas .evt-sec .evt-list-box.bg-blue {
+    background-color: #c2dcf5;
+}
+.evt-xmas2018.christmas .evt-sec .evt-list-box.bg-pink {
+    background-color: #ffcccc;
+}
+.evt-xmas2018.christmas .evt-sec .evt-list-box.bg-aqua {
+    background-color: #a9e8dd;
+}
 
 /*팝업영역*/
 .pop-wrap {position: absolute; z-index: 60; top: 0; left: 0; font-family: "Nanum Square", sans-serif;}
