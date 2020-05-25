@@ -1729,4 +1729,65 @@ p.closed{float:right;width:20px;height:30px;font-size:25px;color:#fff;font-weigh
 }
 
 
+/*론리비즈 세라튼튼 크림 론칭 기념*/
+.evt-cream2020{}
+
+.evt-cream2020 img{
+    border: none !important;
+}
+.evt-cream2020>.evt-tab{
+    
+}
+.evt-cream2020 .evt-tab li{
+    display: inline-block;
+    margin-right: -3px;
+    width: 33.3%;
+    
+}
+
+.evt-cream2020 .evt-panel li{
+    position: relative;
+}
+
+.evt-cream2020 .evt-panel .evt-panel01{  
+    height: 3873px;
+    background-image: url('http://static.nurisoop.co.kr/images/event/20200521_cream/panel02.jpg');
+}
+.evt-cream2020 .evt-panel .evt-panel02{
+    height: 3801px;
+    background-image: url('http://static.nurisoop.co.kr/images/event/20200521_cream/panel01.jpg');
+}
+.evt-cream2020 .evt-panel .evt-panel03{
+    height: 1100px;
+    background-image: url('http://static.nurisoop.co.kr/images/event/20200521_cream/panel04.jpg');
+}
+
+.evt-cream2020 .evt-panel li:nth-of-type(n+2){
+    display: none;
+}
+
+.evt-cream2020 .evt-panel li .btn-particlpate{
+    position: absolute;
+    left: 25%;
+    bottom: 427px;
+}
+
+.evt-cream2020 .evt-panel li .product-box{
+    position: absolute;
+    top: 1280px;
+    left: 50px;
+    margin: 0 auto;
+}
+
+.evt-cream2020 .evt-panel li .product-box{
+    display: none;
+}
+
+.evt-cream2020 .evt-panel li .product-box .product-box-duble a{
+    display: inline-block;
+}
+
+.evt-cream2020 .evt-panel li .product-box .product-box-duble a:nth-of-type(2){
+    padding-left:18px;
+}    
 
