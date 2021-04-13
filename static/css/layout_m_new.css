@@ -1373,3 +1373,52 @@ font-size:28px;color:#4a4a4a;text-align:center;line-height:1.5}
 .pop-wrap.thanksgiving-tg-wrap {width: 150px; top: 498px; left: 50%; margin-left: 120px;}
 .pop-wrap.thanksgiving-tg-wrap.app {top: 498px;}
 .pop-wrap.thanksgiving-tg-wrap .delDelay-tg .pop-contents .clsBtn {background: #ff8657;}
+
+
+/*누리숲 100점 라인 출시 이벤트*/
+.evt-essential100{width:100%;}
+.evt-essential100 *{box-sizing:border-box;}
+.evt-essential100 img{border:none !important;width:100%;max-width:none !important;}
+.evt-essential100 .evt-area02>div{width:100%;position:relative;}
+.evt-essential100 .evt-area02 .product-box{position:absolute;display:block;top:0;left:0;right:0;margin:0 auto;width:90%;}
+.evt-essential100 .evt-area02 .evt-cont02 .product-box{margin-top:33.9%;}
+.evt-essential100 .evt-area02 .evt-cont03 .product-box{margin-top:24.24%;}
+.evt-essential100 .evt-area02 .product-ul{display:flex;width:100%;justify-content:space-around;}
+.evt-essential100 .evt-area02 .product-ul li a{display:block;}
+.evt-essential100 .evt-area02 .product-ul li a img {
+    width: auto;
+}
+.evt-essential100 .evt-area02 .evt-cont02 .ul-top li a img{
+    height: 262px;
+}
+.evt-essential100 .evt-area02 .evt-cont02 .ul-bottom li a img{
+    height: 242px;
+}
+.evt-essential100 .evt-area02 .evt-cont03 .product-ul li a img{
+    height: 220px;
+}
+
+.evt-essential100 .evt-area02 .ul-top {
+	padding:0 2%;
+}
+.evt-essential100 .evt-area02 .ul-bottom {
+	margin-top:7.85%;
+}
+
+
+
+/*12월 굿바이 이벤트*/
+.evt-goodbye{width:100%;}
+.evt-goodbye *{box-sizing:border-box;}
+.evt-goodbye img{border:none !important;width:100%;max-width:none !important;}
+.evt-goodbye>div{width:100%;}
+.evt-goodbye .evt-area03 .menu-tab-box ul{display:flex;}
+.evt-goodbye .evt-area03 .menu-tab-box ul>li{cursor:pointer;}
+.evt-goodbye .evt-area03 .cont-product{display:none;}
+.evt-goodbye .evt-area03 .evt-cont01{display:block;}
+.evt-goodbye .evt-area03{background:url("http://static.nurisoop.co.kr/images/event/20201221_goodbye/product_bg.jpg") no-repeat;background-size:cover;}
+.evt-goodbye .evt-area03 .product-box{width:100%;padding-bottom:6.7%;}
+.evt-goodbye .evt-area03 .product-ul{display:flex;flex-wrap:wrap;justify-content:space-between;width:90%;margin:0 auto;margin-top:3.7%;}
+.evt-goodbye .evt-area03 .product-ul>li{width:32%;margin-top:3.4%;}
+.evt-goodbye .evt-area03 .product-ul>li:nth-of-type(-n+3){margin-top:0;}
+.evt-goodbye .evt-area03 .product-ul>li a{display:block;}

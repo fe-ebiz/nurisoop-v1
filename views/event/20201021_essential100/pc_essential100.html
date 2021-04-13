@@ -271,59 +271,55 @@
             <p class="navigation"><span class="home">HOME</span> > 이벤트 > <span class="on">진행중 이벤트</span></p>
             <div id="subcts_wrap2">
                 <div>
-                    <span class="event_view_tit" style="float:left">론리비즈 세라튼튼 크림 론칭 기념</span>
-                    <span style="float:right">기간 : 2020.05.25 ~ 05.31</span>
+                    <span class="event_view_tit" style="float:left">누리숲 추출물 100점 라인 출시 이벤트</span>
+                    <span style="float:right">기간 : 2020.10.27 ~ 11.23</span>
                 </div>
                 <div class="line"></div>
 
-        <!-- 20200521 론리비즈 세라튼튼 크림 론칭 기념 -->
-        <div class="evt-cream2020">
-            <!-- 상품 -->
-            <ul class="evt-tab">
-                <li><a href="#none"><img src="http://static.nurisoop.co.kr/images/event/20200521_cream/btn_tab01_off.png" alt="이벤트탭01"></a></li>
-                <li><a href="#none"><img src="http://static.nurisoop.co.kr/images/event/20200521_cream/btn_tab02_off.png" alt="이벤트탭02"></a></li>
-                <li><a href="#none"><img src="http://static.nurisoop.co.kr/images/event/20200521_cream/btn_tab03_on.png" alt="이벤트탭03"></a></li>
-            
-            </ul>
-            <ul class="evt-panel">
-                <li class="evt-panel01">
-                    <a target="_blink" class="btn-particlpate" href="http://naver.me/G9bNv4Tf"><img src="http://static.nurisoop.co.kr/images/event/20200521_cream/btn_panel02_participate.png" alt="버튼_참여하기"></a>
-                </li>
-                <li class="evt-panel02">
-                </li>
-                <li class="evt-panel03">
-                    <div class="product-box">
-                        <a target="_blink" href="http://www.nurisoop.co.kr/shop/view/201"><img src="http://static.nurisoop.co.kr/images/event/20200521_cream/btn_panel03_product01.png" alt="상품01"></a>
-                        <div target="_blink" class="product-box-duble">
-                            <a target="_blink" href="http://www.nurisoop.co.kr/shop/view/11/?orderby=date&srchText=%EC%95%B0%ED%94%8C&page=1"><img src="http://static.nurisoop.co.kr/images/event/20200521_cream/btn_panel03_product02.png" alt="상품02"></a>
-                            <a target="_blink" href="http://www.nurisoop.co.kr/shop/view/202"><img src="http://static.nurisoop.co.kr/images/event/20200521_cream/btn_panel03_product03.png" alt="상품03"></a>
+                <!-- ==누리숲 100점 라인 출시 이벤트== -->
+                <div class="evt-essential100">
+                    <!-- 상단 -->
+                    <div class="evt-area01">
+                        <img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential01.jpg" alt="이미지">
+                    </div>
+
+                    <!--중단-->
+                    <div class="evt-area02">
+                        <div class="evt-cont01"><img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_1.jpg" alt="이미지"></div>
+
+                        <div class="evt-cont02">
+                            <img class="img-bg" src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_2.jpg" alt="이미지">
+                            <div class="product-box">
+                                <ul class="product-ul ul-top">
+                                    <li><a href="http://www.nurisoop.co.kr/shop/view/205" target="_blank"><img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_product01.png" alt="상품이미지"></a></li>
+                                    <li><a href="http://www.nurisoop.co.kr/shop/view/210" target="_blank"><img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_product02.png" alt="상품이미지"></a></li>
+                                </ul>
+                                <ul class="product-ul ul-bottom">
+                                    <li><a href="http://www.nurisoop.co.kr/shop/view/206" target="_blank"><img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_product03.png" alt="상품이미지"></a></li>
+                                    <li><a href="http://www.nurisoop.co.kr/shop/view/211" target="_blank"><img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_product04.png" alt="상품이미지"></a></li>
+                                    <li><a href="http://www.nurisoop.co.kr/shop/view/208" target="_blank"><img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_product05.png" alt="상품이미지"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="evt-cont03">
+                            <img class="img-bg" src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_3.jpg" alt="이미지">
+                            <div class="product-box">
+                                <ul class="product-ul">
+                                    <li><a href="http://www.nurisoop.co.kr/shop/view/208" target="_blank"><img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_product06.png" alt="상품이미지"></a></li>
+                                    <li><a href="http://www.nurisoop.co.kr/shop/view/209" target="_blank"><img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential02_product07.png" alt="상품이미지"></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </li>
 
-            </ul>
-            
-        </div>
-        <!--이벤트 스크립트 부분-->
-        <script type="text/javascript">
-            $(".evt-tab li a").on('click', function(){
-
-                let img_off = $(this).parent('li').siblings('li').find('a img');
-                img_off.each(function(){
-                    let img_off_src = $(this).attr('src').replace('_on','_off');
-                    $(this).attr('src',img_off_src);
-                });
-                
-                let img_on = $(this).children('img');
-                let img_on_src = img_on.attr('src').replace('_off','_on');
-                img_on.attr('src',img_on_src)
-                let tabNum = $(this).parent('li').index();
-
-                $('.evt-panel li').css('display','none');
-                $('.evt-panel li').eq(tabNum).css('display','block');
-            })
-        </script>
-        <!-- / -->
+                    <!--마지막-->
+                    <div class="evt-area03">
+                        <img src="http://static.nurisoop.co.kr/images/event/20201021_essential/essential03.jpg" alt="이미지">
+                    </div>
+                    
+                </div>
+                <!-- ==이벤트 끝== -->
 
                 <div class="line"></div>
                 <div style="float:right"><a href="/event/index/?type=end&page=1"><img src="http://static.nurisoop.co.kr/images/img/btn_list2.jpg" alt="목록"></a></div>

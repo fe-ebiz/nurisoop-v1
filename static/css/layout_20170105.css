@@ -1758,11 +1758,11 @@ p.closed{float:right;width:20px;height:30px;font-size:25px;color:#fff;font-weigh
     background-image: url('http://static.nurisoop.co.kr/images/event/20200521_cream/panel01.jpg');
 }
 .evt-cream2020 .evt-panel .evt-panel03{
-    height: 1100px;
-    background-image: url('http://static.nurisoop.co.kr/images/event/20200521_cream/panel04.jpg');
+    height: 5868px;
+    background-image: url('http://static.nurisoop.co.kr/images/event/20200521_cream/panel03.jpg');
 }
 
-.evt-cream2020 .evt-panel li:nth-of-type(n+2){
+.evt-cream2020 .evt-panel li:nth-of-type(-n+2){
     display: none;
 }
 
@@ -1779,8 +1779,8 @@ p.closed{float:right;width:20px;height:30px;font-size:25px;color:#fff;font-weigh
     margin: 0 auto;
 }
 
-.evt-cream2020 .evt-panel li .product-box{
-    display: none;
+.evt-cream2020 .evt-panel li .product-box .product-box-duble{
+    margin-top: 22px;
 }
 
 .evt-cream2020 .evt-panel li .product-box .product-box-duble a{
@@ -1790,4 +1790,38 @@ p.closed{float:right;width:20px;height:30px;font-size:25px;color:#fff;font-weigh
 .evt-cream2020 .evt-panel li .product-box .product-box-duble a:nth-of-type(2){
     padding-left:18px;
 }    
+
+
+/*누리숲 100점 라인 출시 이벤트*/
+.evt-essential100{width:100%;}
+.evt-essential100 *{box-sizing:border-box;}
+.evt-essential100 img{border:none !important;}
+.evt-essential100 .evt-area02>div{position:relative;}
+.evt-essential100 .evt-area02 .product-box{position:absolute;display:block;top:0;left:0;right:0;margin:0 auto;width:90%;}
+.evt-essential100 .evt-area02 .evt-cont02 .product-box{margin-top:33.9%;}
+.evt-essential100 .evt-area02 .evt-cont03 .product-box{margin-top:24.24%;}
+.evt-essential100 .evt-area02 .product-ul{display:flex;width:100%;justify-content:space-around;}
+.evt-essential100 .evt-area02 .product-ul li a{display:block;}
+.evt-essential100 .evt-area02 .ul-top{padding:0 5%;}
+.evt-essential100 .evt-area02 .ul-bottom{margin-top:7.85%;}
+
+
+/*12월 굿바이 이벤트*/
+.evt-goodbye{width:100%;}
+.evt-goodbye *{box-sizing:border-box;}
+.evt-goodbye img{border:none !important;}
+.evt-goodbye>div{width:100%;}
+.evt-goodbye .evt-area03 .menu-tab-box ul{display:flex;}
+.evt-goodbye .evt-area03 .menu-tab-box ul>li{cursor:pointer;}
+.evt-goodbye .evt-area03 .cont-product{display:none;}
+.evt-goodbye .evt-area03 .evt-cont01{display:block;}
+.evt-goodbye .evt-area03{background:url("http://static.nurisoop.co.kr/images/event/20201221_goodbye/product_bg.jpg") no-repeat;background-size:cover;}
+.evt-goodbye .evt-area03 .product-box{width:100%;padding-bottom:62px;}
+.evt-goodbye .evt-area03 .product-ul{display:flex;flex-wrap:wrap;justify-content:space-between;width:90%;margin:0 auto;margin-top:34px;}
+.evt-goodbye .evt-area03 .product-ul>li{max-width:268px;width:100%;margin-top:28px;}
+.evt-goodbye .evt-area03 .product-ul>li:nth-of-type(-n+3){margin-top:0;}
+.evt-goodbye .evt-area03 .product-ul>li a{display:block;}
+
+
+
 
